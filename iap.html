@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Page Title] | Arjun K Raghav</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- =========== Header =========== -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold accent-color">Arjun K Raghav</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">Home</a>
+                <!-- Active page indicator -->
+                 <a href="mutual.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">Mutual Funds</a>
+                <span class="accent-color font-bold border-b-2 border-accent-color pb-1">I A P</span>
+                
+                <a href="pms.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">PMS</a>
+                <a href="#contact" class="text-gray-600 hover:accent-color font-medium transition duration-300">Contact</a>
+                <a href="start.html"
+                    class="bg-accent-color text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 shadow-md hover:shadow-lg">Start
+                    Now</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-600 focus:outline-none"><svg
+                        class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg></button></div>
+        </nav>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="mutual.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Mutual Funds</a>
+            <!-- Active page in mobile -->
+            <div class="block py-3 px-6 text-sm bg-accent-color text-white font-semibold"> IAP </div>
+            <a href="pms.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">PMS </a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Contact</a>
+            <a href="start.html" class="block py-4 px-6 text-sm bg-accent-color text-white text-center rounded-b-lg">Start
+                Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Service Hero Section =========== -->
+        <section class="service-hero-bg">
+            <div class="container mx-auto px-4 sm:px-6 py-20 md:py-24 relative">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="text-white reveal">
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                                Complete Guide to <span class="highlight-color">Intelligent Advisory Portfolios</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl mb-8 text-white/90">
+                                Everything you need to know about IAP investing - simplified equity market participation with expert curation and automated monitoring.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#what-is-iap" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-center">
+                                    <i class="fas fa-graduation-cap mr-2"></i>
+                                    Start Learning
+                                </a>
+                                <a href="#contact" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300 text-center">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Get Expert Advice
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                                <h3 class="text-2xl font-bold text-white mb-6 text-center">What You'll Learn</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>What is IAP & How it works</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>ROBO vs Expert-driven portfolios</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Dynamic vs Static portfolio types</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Risk management & monitoring</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Investment minimums & strategies</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== What is IAP Section =========== -->
+        <section id="what-is-iap" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">What is Intelligent Advisory Portfolio (IAP)?</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Understanding IAP with simple explanations and real-world comparisons</p>
+                    </div>
+                    
+                    <!-- Simple Definition -->
+                    <div class="reveal mb-12">
+                        <div class="bg-gray-50 p-8 rounded-2xl">
+                            <p class="text-xl leading-relaxed mb-6">
+                                <span class="font-bold accent-color">Intelligent Advisory Portfolios (IAP)</span> are pre-designed innovative investment solutions, curated to simplify equity market investing for those who don't have time to actively manage investments. IAPs are diverse range of pre-packaged equity portfolios curated by Registered Investment Advisors (RIAs).
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                These portfolios are curated & monitored by RIAs and follow strict rules & parameters to manage the risk-return ratio of your investment. Perfect for both active and passive investors seeking professional portfolio management.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Analogy Box -->
+                    <div class="analogy-box reveal">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--color-highlight);">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            Simple Analogy: The Personal Chef
+                        </h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Imagine you want to eat healthy meals but don't have time to plan, shop, or cook. You hire a <strong>personal chef</strong> who creates a weekly meal plan based on your dietary preferences, health goals, and taste preferences.
+                        </p>
+                        <p class="text-lg leading-relaxed mb-4">
+                            The chef monitors your health progress, adjusts recipes when needed, and ensures you get balanced nutrition. You just need to tell them your budget and preferences - they handle everything else.
+                        </p>
+                        <div class="mt-6 p-4 bg-white/50 rounded-lg">
+                            <p class="font-semibold">Similarly with IAP:</p>
+                            <p>Instead of a chef, you have RIA experts who create and monitor investment portfolios based on your financial goals, risk appetite, and investment horizon - you just invest and relax.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="reveal">
+                        <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--color-dark);">Key Features Explained</h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">RIA Curation</h4>
+                                    <p class="text-gray-600">Registered Investment Advisors with SEBI certification design and monitor portfolios using systematic research and proven strategies.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Pre-packaged Solutions</h4>
+                                    <p class="text-gray-600">Ready-to-invest portfolios eliminating the need for individual stock research and selection, saving time and effort.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Automated Monitoring</h4>
+                                    <p class="text-gray-600">Continuous portfolio tracking and rebalancing based on market conditions and performance parameters.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Risk Management</h4>
+                                    <p class="text-gray-600">Strict adherence to risk-return parameters with systematic approach to manage downside risks.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Flexible Investment</h4>
+                                    <p class="text-gray-600">Options for both lumpsum and SIP investments starting from ₹2.5 lakh minimum investment amount.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Real-time Tracking</h4>
+                                    <p class="text-gray-600">24/7 portfolio monitoring with transparent reporting and performance updates through digital platforms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== How IAP Works Section =========== -->
+        <section id="how-it-works" class="py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">How IAP Works</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Understanding the step-by-step process of IAP operations</p>
+                    </div>
+
+                    <!-- Vertical Accordion Cards -->
+                    <div class="reveal max-w-4xl mx-auto space-y-4">
+                        <!-- Step 1 Card -->
+                        <div class="accordion-card" data-step="step1">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">01</span>
+                                    <h3 class="accordion-title">Expert Curation</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="true" aria-controls="step1-content">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                            <div id="step1-content" class="accordion-content">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Registered Investment Advisors (RIAs) design portfolios using systematic research, market analysis, and proven investment strategies. SEBI-certified professionals bring years of expertise to portfolio construction.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>SEBI-registered RIA professionals</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Systematic research methodology</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Proven investment strategies</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-user-graduate text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 Card -->
+                        <div class="accordion-card" data-step="step2">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">02</span>
+                                    <h3 class="accordion-title">Portfolio Selection</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step2-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step2-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Choose from pre-packaged portfolios based on your risk appetite, investment goals, and time horizon preferences. Each portfolio is designed for specific investor profiles and market conditions.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Risk-based portfolio options</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Goal-oriented selections</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Time horizon matching</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-clipboard-list text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 Card -->
+                        <div class="accordion-card" data-step="step3">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">03</span>
+                                    <h3 class="accordion-title">Investment Execution</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step3-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step3-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Invest through lumpsum or SIP mode with minimum investment starting from ₹2.5 lakh in selected IAP. Digital execution makes the process seamless and transparent.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>₹2.5 lakh minimum investment</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Lumpsum & SIP options</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Digital execution process</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-hand-holding-usd text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 Card -->
+                        <div class="accordion-card" data-step="step4">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">04</span>
+                                    <h3 class="accordion-title">Automated Monitoring</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step4-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step4-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                RIAs continuously monitor portfolio performance, market conditions, and make necessary adjustments as per strategy. Advanced algorithms and expert oversight ensure optimal performance.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Continuous performance monitoring</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Market condition analysis</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Strategy-based adjustments</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-desktop text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 Card -->
+                        <div class="accordion-card" data-step="step5">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">05</span>
+                                    <h3 class="accordion-title">Dynamic Rebalancing</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step5-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step5-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Portfolio is rebalanced dynamically based on market opportunities and risk management parameters. This ensures optimal allocation without requiring manual intervention.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Market opportunity-based rebalancing</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Risk parameter adherence</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Automated optimization</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-balance-scale text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 6 Card -->
+                        <div class="accordion-card" data-step="step6">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">06</span>
+                                    <h3 class="accordion-title">Performance Tracking</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step6-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step6-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Real-time portfolio tracking with transparent reporting and regular performance updates through digital platforms. Complete visibility into your investment performance.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Real-time portfolio tracking</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Transparent reporting</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Regular performance updates</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-chart-line text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IAP vs Traditional Investing (keeping this as is) -->
+                    <div class="info-box reveal mt-12">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">
+                            <i class="fas fa-balance-scale mr-2 accent-color"></i>
+                            IAP vs Traditional Direct Equity Investing
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-semibold mb-3">Traditional Direct Equity</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Individual stock research required</li>
+                                    <li>• Manual portfolio monitoring</li>
+                                    <li>• Time-intensive management</li>
+                                    <li>• Higher risk of emotional decisions</li>
+                                    <li>• Need market timing skills</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-3">IAP Approach</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Pre-researched portfolio by experts</li>
+                                    <li>• Automated monitoring & rebalancing</li>
+                                    <li>• Hassle-free investment experience</li>
+                                    <li>• Systematic, emotion-free approach</li>
+                                    <li>• Professional market timing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Why Choose IAP Section =========== -->
+        <section id="why-choose-iap" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Why Choose IAP?</h2>
+                    <p class="text-lg mt-4 max-w-3xl mx-auto">Compelling reasons backed by expert insights and investor benefits</p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Benefit 1 -->
+                        <div class="edu-card reveal">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-clock text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Time-Saving</h3>
+                                <p class="leading-relaxed mb-4">Eliminates need for individual stock research, market monitoring, and portfolio management - perfect for busy professionals.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Save 10+ hours weekly on investment research</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="edu-card reveal" style="transition-delay: 100ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-user-tie text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Expert Management</h3>
+                                <p class="leading-relaxed mb-4">Access to seasoned RIA professionals who manage portfolios using institutional-grade research and proven strategies.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">SEBI-registered investment advisors</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="edu-card reveal" style="transition-delay: 200ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Risk Management</h3>
+                                <p class="leading-relaxed mb-4">Systematic risk management with strict adherence to predefined parameters and diversification strategies.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Built-in stop-loss & risk controls</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div class="edu-card reveal" style="transition-delay: 300ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-chart-line text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Diversification</h3>
+                                <p class="leading-relaxed mb-4">Pre-built diversified portfolios across sectors, market caps, and themes reducing concentration risk.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">20-30 stocks across multiple sectors</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 5 -->
+                        <div class="edu-card reveal" style="transition-delay: 400ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Digital Convenience</h3>
+                                <p class="leading-relaxed mb-4">Complete online investment process with real-time portfolio tracking and transparent performance reporting.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">24/7 portfolio access via app</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 6 -->
+                        <div class="edu-card reveal" style="transition-delay: 500ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-cogs text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Automated Rebalancing</h3>
+                                <p class="leading-relaxed mb-4">Dynamic portfolio adjustments based on market conditions without requiring manual intervention from investors.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Systematic portfolio optimization</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Types of IAP Section =========== -->
+        <section id="types" class="py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Types of IAP</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Choose the right IAP type based on your investment style and preferences</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- ROBO Managed -->
+                        <div class="edu-card reveal">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-robot text-blue-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--color-dark);">ROBO Managed</h3>
+                                <p class="text-sm leading-relaxed mb-3">Algorithm-driven portfolios with systematic rules and automated rebalancing based on quantitative models.</p>
+                                <div class="text-xs bg-blue-50 p-2 rounded">
+                                    <p><strong>Style:</strong> Quantitative</p>
+                                    <p><strong>Rebalancing:</strong> Automated</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expert Driven -->
+                        <div class="edu-card reveal" style="transition-delay: 100ms;">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-user-graduate text-green-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--color-dark);">Expert Driven</h3>
+                                <p class="text-sm leading-relaxed mb-3">Human expert overlay on systematic processes with active fund manager decisions and market insights.</p>
+                                <div class="text-xs bg-green-50 p-2 rounded">
+                                    <p><strong>Style:</strong> Qualitative + Quantitative</p>
+                                    <p><strong>Rebalancing:</strong> Expert-led</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Portfolio -->
+                        <div class="edu-card reveal" style="transition-delay: 200ms;">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-exchange-alt text-purple-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--color-dark);">Dynamic Portfolio</h3>
+                                <p class="text-sm leading-relaxed mb-3">Flexible allocation that adapts to market conditions with regular strategy adjustments.</p>
+                                <div class="text-xs bg-purple-50 p-2 rounded">
+                                    <p><strong>Flexibility:</strong> High</p>
+                                    <p><strong>Adjustments:</strong> Frequent</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Static Portfolio -->
+                        <div class="edu-card reveal" style="transition-delay: 300ms;">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-anchor text-yellow-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--color-dark);">Static Portfolio</h3>
+                                <p class="text-sm leading-relaxed mb-3">Fixed allocation strategy with predefined stocks and weights, minimal changes over time.</p>
+                                <div class="text-xs bg-yellow-50 p-2 rounded">
+                                    <p><strong>Flexibility:</strong> Low</p>
+                                    <p><strong>Adjustments:</strong> Minimal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular IAP Examples -->
+                    <div class="mt-16 reveal">
+                        <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--color-dark);">Popular IAP Examples</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="edu-card">
+                                <h4 class="text-lg font-bold mb-3 accent-color">ACE Cash Portfolio</h4>
+                                <div class="space-y-2 text-sm">
+                                    <p><strong>Investment Horizon:</strong> 3 Years</p>
+                                    <p><strong>Minimum Investment:</strong> ₹2,50,000</p>
+                                    <p><strong>Strategy:</strong> Cash-rich companies focus</p>
+                                    <p><strong>Risk Level:</strong> Moderate to High</p>
+                                </div>
+                            </div>
+                            
+                            <div class="edu-card">
+                                <h4 class="text-lg font-bold mb-3 accent-color">Alpha Masters Portfolio</h4>
+                                <div class="space-y-2 text-sm">
+                                    <p><strong>Investment Horizon:</strong> 5+ Years</p>
+                                    <p><strong>Minimum Investment:</strong> ₹2,50,000</p>
+                                    <p><strong>Strategy:</strong> Growth & quality stocks</p>
+                                    <p><strong>Risk Level:</strong> High</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Understanding Portfolio Management Section =========== -->
+        <section id="portfolio-management" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Understanding Portfolio Management</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">How professional portfolio management works in IAP</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                        <div class="reveal">
+                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">What makes IAP different?</h3>
+                            <p class="text-lg leading-relaxed mb-6">
+                                Unlike traditional mutual funds where you buy units, <strong>IAP gives you direct ownership</strong> of underlying stocks while professionals manage the portfolio construction and monitoring.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Direct Stock Ownership</h4>
+                                        <p class="text-gray-600">Own stocks directly in demat account</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Professional Construction</h4>
+                                        <p class="text-gray-600">Expert portfolio design and optimization</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Transparent Operations</h4>
+                                        <p class="text-gray-600">Complete visibility of holdings and changes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <div class="bg-gray-50 p-8 rounded-2xl">
+                                <h4 class="text-xl font-bold mb-4 text-center" style="color: var(--color-dark);">IAP vs Mutual Funds</h4>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Ownership:</span>
+                                        <span>Direct stock ownership</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Transparency:</span>
+                                        <span>Complete visibility</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Customization:</span>
+                                        <span>High (theme-based)</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Min. Investment:</span>
+                                        <span>₹2.5 lakh+</span>
+                                    </div>
+                                </div>
+                                <div class="mt-6 p-4 bg-white rounded-lg">
+                                    <p class="text-sm font-semibold text-center">Best suited for investors with ₹2.5 lakh+ corpus seeking professional equity management</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- =========== Contact Section =========== -->
+        <section id="contact" class="bg-white py-20 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Contact for Investment Guidance</h2>
+            <p class="text-lg mt-4 max-w-3xl mx-auto">Get personalized investment advice and support to start your wealth creation journey</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="reveal">
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Get Started Today</h3>
+                    <form class="space-y-6" action="#" method="POST">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label for="place" class="block text-sm font-semibold text-gray-700 mb-2">City *</label>
+                                <input type="text" id="place" name="place" required class="form-input" placeholder="Your city">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="age" class="block text-sm font-semibold text-gray-700 mb-2">Age *</label>
+                                <input type="number" id="age" name="age" min="18" max="100" required class="form-input" placeholder="Your age">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required class="form-input" placeholder="Your phone number">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Questions or Comments</label>
+                            <textarea id="message" name="message" rows="5" class="form-input form-textarea" placeholder="Tell us about your investment goals, any questions about the app setup, or specific guidance you need..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent-color text-white px-6 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transition duration-300 shadow-lg hover:shadow-xl">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message & Get Started
+                        </button>
+                        
+                        <p class="text-sm text-gray-500 text-center">
+                            We'll respond within 24 hours to help you begin your investment journey.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Why Choose Section -->
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Why Start with Arjun?</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Expert Guidance</h4>
+                                <p class="text-gray-600">7+ years of experience helping individuals and families achieve their financial goals through smart investing.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-user-friends text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Personalized Approach</h4>
+                                <p class="text-gray-600">Customized investment strategies tailored to your specific goals, risk tolerance, and financial situation.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Ongoing Support</h4>
+                                <p class="text-gray-600">Continuous guidance throughout your investment journey with regular portfolio reviews and market updates.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-chart-line text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Proven Track Record</h4>
+                                <p class="text-gray-600">Successfully guided 500+ families in building wealth through systematic and disciplined investing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold accent-color">500+</div>
+                                <div class="text-sm text-gray-600">Families Guided</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold accent-color">₹50Cr+</div>
+                                <div class="text-sm text-gray-600">Assets Managed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+<footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6 py-16">
+        <!-- Main Footer Content -->
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <!-- Brand Section -->
+            <div class="md:col-span-2">
+                <h3 class="text-3xl font-bold mb-4 accent-color">Arjun K Raghav</h3>
+                <p class="text-gray-300 mb-6 max-w-md">
+                    Your trusted partner in building generational wealth for Malayali families. Expert financial guidance for a prosperous tomorrow.
+                </p>
+                <!-- AMFI Details -->
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <p class="text-sm text-gray-400">
+                        <span class="font-medium">Name:</span> Arjun K | 
+                        <span class="font-medium">Regn No:</span> ARN-323175 | 
+                        <span class="font-medium">EUIN:</span> E612434
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html#about" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                    <li><a href="index.html#products" class="text-gray-300 hover:text-white transition duration-300">Investment Products</a></li>
+                    <li><a href="index.html#calculators" class="text-gray-300 hover:text-white transition duration-300">Financial Tools</a></li>
+                    <li><a href="index.html#testimonials" class="text-gray-300 hover:text-white transition duration-300">Testimonials</a></li>
+                    <li><a href="start.html" class="text-gray-300 hover:text-white transition duration-300">Start Now</a></li>
+                </ul>
+            </div>
+            <!-- Educational Resources -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Learn</h4>
+                <ul class="space-y-3">
+                    <li><a href="mutual.html" class="text-gray-300 hover:text-white transition duration-300">Mutual Funds Guide</a></li>
+                    <li><a href="iap.html" class="text-gray-300 hover:text-white transition duration-300">IAP Education</a></li>
+                    <li><a href="pms.html" class="text-gray-300 hover:text-white transition duration-300">PMS Guide</a></li>
+                    <li><a href="start.html#contact" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Media & Bottom Section -->
+        <div class="border-t border-gray-700 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Social Media Links -->
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="https://www.linkedin.com/in/arjun-k-raghav-a2793a321/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-600 transition duration-300" 
+                       aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arjun_k_raghav/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition duration-300" 
+                       aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-400 transition duration-300" 
+                       aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 text-sm mb-2">
+                        Building wealth for <span class="font-semibold text-white">500+ families</span> since 2018
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 Arjun K Raghav. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-8 pt-6 border-t border-gray-800">
+            <p class="text-xs text-gray-500 text-center max-w-4xl mx-auto leading-relaxed">
+                <strong>Disclaimer:</strong> Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. This website is for informational purposes only and should not be construed as investment advice.
+            </p>
+        </div>
+    </div>
+
+    <!-- Designer Credit Bottom Bar -->
+    <div class="bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 py-3">
+            <div class="text-center">
+                <a href="https://wa.me/8592983978" target="_blank" rel="noopener" 
+                   class="text-xs text-gray-500 hover:text-gray-300 hover:underline transition duration-300">
+                    <i class="fas fa-code text-xs mr-1"></i>
+                    Designed by <span class="font-medium">Codeware Studio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Success Popup -->
+    <div class="success-popup-overlay" id="successOverlay">
+        <div class="success-popup" id="successPopup">
+            <div class="mb-4">
+                <i class="fas fa-check-circle text-4xl mb-3"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll contact you within 24 hours.</p>
+            <button type="button" onclick="closeSuccessPopup()">Close</button>
+        </div>
+    </div>
+    <!-- Replace the existing contact section with the standardized contact form above -->
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Investment Journey | Arjun K Raghav</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- =========== Header =========== -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold accent-color">Arjun K Raghav</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">Home</a>
+                <a href="mutual.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">Mutual Funds</a>
+                <a href="iap.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">IAP</a>
+                <a href="pms.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">PMS</a>
+                <a href="#contact" class="text-gray-600 hover:accent-color font-medium transition duration-300">Contact</a>
+                <span class="bg-accent-color text-white px-5 py-2.5 rounded-lg font-semibold shadow-md">You're Here!</span>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-600 focus:outline-none"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="index.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="mutual.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Mutual Funds</a>
+            <a href="iap.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">IAP</a>
+            <a href="pms.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">PMS</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Hero Section =========== -->
+        <section class="start-hero-bg">
+            <div class="container mx-auto px-4 sm:px-6 py-20 md:py-24 relative">
+                <div class="max-w-4xl mx-auto text-center text-white reveal">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                        Start Your <span class="highlight-color">Investment Journey</span> Today
+                    </h1>
+                    <p class="text-lg sm:text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+                        Follow these simple steps to begin investing with professional guidance from Arjun K Raghav. Get started in just a few minutes!
+                    </p>
+                    <div class="flex justify-center items-center space-x-4">
+                        <i class="fas fa-rocket text-3xl highlight-color"></i>
+                        <span class="text-xl font-semibold">Let's Get Started!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Steps Section =========== -->
+        <section class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">3 Simple Steps to Begin</h2>
+                        <p class="text-lg mt-4 max-w-2xl mx-auto">Follow this easy guide to start your investment journey with our recommended platform</p>
+                    </div>
+
+                    <!-- Horizontal Step Cards -->
+                    <div class="flex flex-col lg:flex-row gap-8 reveal">
+                        <!-- Step 1: Download App -->
+                        <div class="step-card">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span class="text-white text-2xl font-bold">1</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Download the App</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Download the official investment app to get started with your financial journey. Available on both platforms.
+                            </p>
+                            
+                            <!-- App Download Buttons -->
+                            <div class="flex flex-col items-center space-y-3 mb-6">
+                                <a href="https://a.aonelink.in/ANGOne/aPNPjDI" class="app-store-btn" target="_blank">
+                                    <i class="fab fa-google-play text-xl mr-2"></i>
+                                    <div class="text-left">
+                                        <div class="text-xs">Get it on</div>
+                                        <div class="text-sm font-semibold">Google Play</div>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://a.aonelink.in/ANGOne/aPNPjDI" class="app-store-btn" target="_blank">
+                                    <i class="fab fa-apple text-xl mr-2"></i>
+                                    <div class="text-left">
+                                        <div class="text-xs">Download on</div>
+                                        <div class="text-sm font-semibold">App Store</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Set Up Account -->
+                        <div class="step-card">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span class="text-white text-2xl font-bold">2</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Set Up Your Account</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Complete your account setup by providing basic details and completing the KYC process. It's quick and secure.
+                            </p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Provide basic information</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Complete KYC verification</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Link your bank account</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Set investment preferences</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Contact for Guidance -->
+                        <div class="step-card">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span class="text-white text-2xl font-bold">3</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Contact for Guidance</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Once your account is set up, reach out to Arjun for personalized investment guidance and portfolio recommendations.
+                            </p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-user-tie accent-color mr-3"></i>
+                                    <span>Get personal consultation</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-chart-pie accent-color mr-3"></i>
+                                    <span>Receive portfolio recommendations</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-bullseye accent-color mr-3"></i>
+                                    <span>Set investment goals</span>
+                                </div>
+                                <div class="flex items-center text-sm">
+                                    <i class="fas fa-handshake accent-color mr-3"></i>
+                                    <span>Start your investment journey</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- =========== NRI Disclaimer Section =========== -->
+        <section class="py-8 md:py-12">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-4xl mx-auto reveal">
+                    <div class="disclaimer-box">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-exclamation-triangle text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-3" style="color: var(--color-dark);">Important Notice for NRI Investors</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    If you are a <strong>Non-Resident Indian (NRI)</strong>, please note that the app setup process may have different requirements and restrictions. 
+                                </p>
+                                <p class="text-gray-700 leading-relaxed font-semibold">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    For NRI investment guidance, please contact Arjun directly through the contact form below for personalized assistance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Contact Section =========== -->
+        <section id="contact" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Contact for Investment Guidance</h2>
+                    <p class="text-lg mt-4 max-w-3xl mx-auto">Get personalized investment advice and support to start your wealth creation journey</p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="reveal">
+                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Get Started Today</h3>
+                            <form class="space-y-6" action="#" method="POST">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                                        <input type="text" id="name" name="name" required class="form-input" placeholder="Your full name">
+                                    </div>
+                                    <div>
+                                        <label for="place" class="block text-sm font-semibold text-gray-700 mb-2">City *</label>
+                                        <input type="text" id="place" name="place" required class="form-input" placeholder="Your city">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="age" class="block text-sm font-semibold text-gray-700 mb-2">Age *</label>
+                                        <input type="number" id="age" name="age" min="18" max="100" required class="form-input" placeholder="Your age">
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" required class="form-input" placeholder="Your phone number">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Questions or Comments</label>
+                                    <textarea id="message" name="message" rows="5" class="form-input form-textarea" placeholder="Tell us about your investment goals, any questions about the app setup, or specific guidance you need..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-accent-color text-white px-6 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transition duration-300 shadow-lg hover:shadow-xl">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    Send Message & Get Started
+                                </button>
+                                
+                                <p class="text-sm text-gray-500 text-center">
+                                    We'll respond within 24 hours to help you begin your investment journey.
+                                </p>
+                            </form>
+                        </div>
+
+                        <!-- Why Choose Section -->
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Why Start with Arjun?</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-graduation-cap text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Expert Guidance</h4>
+                                        <p class="text-gray-600">7+ years of experience helping individuals and families achieve their financial goals through smart investing.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-user-friends text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Personalized Approach</h4>
+                                        <p class="text-gray-600">Customized investment strategies tailored to your specific goals, risk tolerance, and financial situation.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-shield-alt text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Ongoing Support</h4>
+                                        <p class="text-gray-600">Continuous guidance throughout your investment journey with regular portfolio reviews and market updates.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-chart-line text-yellow-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Proven Track Record</h4>
+                                        <p class="text-gray-600">Successfully guided 500+ families in building wealth through systematic and disciplined investing.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <div>
+                                        <div class="text-2xl font-bold accent-color">500+</div>
+                                        <div class="text-sm text-gray-600">Families Guided</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold accent-color">₹50Cr+</div>
+                                        <div class="text-sm text-gray-600">Assets Managed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+<footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6 py-16">
+        <!-- Main Footer Content -->
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <!-- Brand Section -->
+            <div class="md:col-span-2">
+                <h3 class="text-3xl font-bold mb-4 accent-color">Arjun K Raghav</h3>
+                <p class="text-gray-300 mb-6 max-w-md">
+                    Your trusted partner in building generational wealth for Malayali families. Expert financial guidance for a prosperous tomorrow.
+                </p>
+                <!-- AMFI Details -->
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <p class="text-sm text-gray-400">
+                        <span class="font-medium">Name:</span> Arjun K | 
+                        <span class="font-medium">Regn No:</span> ARN-323175 | 
+                        <span class="font-medium">EUIN:</span> E612434
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html#about" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                    <li><a href="index.html#products" class="text-gray-300 hover:text-white transition duration-300">Investment Products</a></li>
+                    <li><a href="index.html#calculators" class="text-gray-300 hover:text-white transition duration-300">Financial Tools</a></li>
+                    <li><a href="index.html#testimonials" class="text-gray-300 hover:text-white transition duration-300">Testimonials</a></li>
+                    <li><a href="start.html" class="text-gray-300 hover:text-white transition duration-300">Start Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Educational Resources -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Learn</h4>
+                <ul class="space-y-3">
+                    <li><a href="mutual.html" class="text-gray-300 hover:text-white transition duration-300">Mutual Funds Guide</a></li>
+                    <li><a href="iap.html" class="text-gray-300 hover:text-white transition duration-300">IAP Education</a></li>
+                    <li><a href="pms.html" class="text-gray-300 hover:text-white transition duration-300">PMS Guide</a></li>
+                    <li><a href="start.html#contact" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Media & Bottom Section -->
+        <div class="border-t border-gray-700 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Social Media Links -->
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="https://www.linkedin.com/in/arjun-k-raghav-a2793a321/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-600 transition duration-300" 
+                       aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arjun_k_raghav/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition duration-300" 
+                       aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-400 transition duration-300" 
+                       aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 text-sm mb-2">
+                        Building wealth for <span class="font-semibold text-white">500+ families</span> since 2018
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 Arjun K Raghav. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-8 pt-6 border-t border-gray-800">
+            <p class="text-xs text-gray-500 text-center max-w-4xl mx-auto leading-relaxed">
+                <strong>Disclaimer:</strong> Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. This website is for informational purposes only and should not be construed as investment advice.
+            </p>
+        </div>
+    </div>
+
+    <!-- Designer Credit Bottom Bar -->
+    <div class="bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 py-3">
+            <div class="text-center">
+                <a href="https://wa.me/8592983978" target="_blank" rel="noopener" 
+                   class="text-xs text-gray-500 hover:text-gray-300 hover:underline transition duration-300">
+                    <i class="fas fa-code text-xs mr-1"></i>
+                    Designed by <span class="font-medium">Codeware Studio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Success Popup -->
+    <div class="success-popup-overlay" id="successOverlay">
+        <div class="success-popup" id="successPopup">
+            <div class="mb-4">
+                <i class="fas fa-check-circle text-4xl mb-3"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll contact you within 24 hours.</p>
+            <button type="button" onclick="closeSuccessPopup()">Close</button>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

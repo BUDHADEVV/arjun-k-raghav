@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Page Title] | Arjun K Raghav</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- =========== Header =========== -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold accent-color">Arjun K Raghav</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">Home</a>
+                <!-- Active page indicator -->
+                <span class="accent-color font-bold border-b-2 border-accent-color pb-1">Mutual Funds</span>
+                <a href="iap.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">IAP</a>
+                <a href="pms.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">PMS</a>
+                <a href="#contact" class="text-gray-600 hover:accent-color font-medium transition duration-300">Contact</a>
+                <a href="start.html"
+                    class="bg-accent-color text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 shadow-md hover:shadow-lg">Start
+                    Now</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-600 focus:outline-none"><svg
+                        class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg></button></div>
+        </nav>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Home</a>
+            <!-- Active page in mobile -->
+            <div class="block py-3 px-6 text-sm bg-accent-color text-white font-semibold"> Mutual Funds </div>
+            <a href="iap.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">IAP Education</a>
+            <a href="pms.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">PMS Education</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Contact</a>
+            <a href="start.html" class="block py-4 px-6 text-sm bg-accent-color text-white text-center rounded-b-lg">Start
+                Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Service Hero Section =========== -->
+        <section class="service-hero-bg">
+            <div class="container mx-auto px-4 sm:px-6 py-20 md:py-24 relative">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="text-white reveal">
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                                Complete Guide to <span class="highlight-color">Mutual Funds</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl mb-8 text-white/90">
+                                Everything you need to know about mutual fund investing - from basics to advanced strategies. Make informed investment decisions with proper knowledge.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#what-are-mutual-funds" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-center">
+                                    <i class="fas fa-graduation-cap mr-2"></i>
+                                    Start Learning
+                                </a>
+                                <a href="#contact" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300 text-center">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Get Expert Advice
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                                <h3 class="text-2xl font-bold text-white mb-6 text-center">What You'll Learn</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>What are Mutual Funds & How they work</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Types of Mutual Funds explained</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>SIP vs Lumpsum investment strategies</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Tax implications & benefits</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Risk assessment & portfolio building</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== What are Mutual Funds Section =========== -->
+        <section id="what-are-mutual-funds" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">What are Mutual Funds?</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Let's understand mutual funds with simple explanations and real-world analogies</p>
+                    </div>
+                    
+                    <!-- Simple Definition -->
+                    <div class="reveal mb-12">
+                        <div class="bg-gray-50 p-8 rounded-2xl">
+                            <p class="text-xl leading-relaxed mb-6">
+                                A <span class="font-bold accent-color">Mutual Fund</span> is an investment vehicle that pools money from multiple investors to invest in a diversified portfolio of stocks, bonds, and other securities. Professional fund managers make investment decisions on behalf of investors.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                When you invest in a mutual fund, you buy <span class="font-semibold">units</span> of the fund, and each unit represents a proportional share in the fund's holdings. This allows even small investors to access professionally managed, diversified portfolios.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Analogy Box -->
+                    <div class="analogy-box reveal">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--color-highlight);">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            Simple Analogy: The Chocolate Box
+                        </h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Imagine four friends who want to buy a box of 12 chocolates, but they each have only ₹10. They pool their money, buying the box for ₹40. Each friend now owns 3 chocolates or <strong>3 units</strong> of the box, based on their ₹10 contribution.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            The cost of one unit is calculated by dividing the total cost (₹40) by the total number of units (12), resulting in <strong>₹3.33 per unit</strong>. When you multiply the number of units (3) by the cost per unit (₹3.33), you get the initial investment of ₹10. Each friend is now a unit holder in the box of chocolates, collectively owned by all of them.
+                        </p>
+                        <div class="mt-6 p-4 bg-white/50 rounded-lg">
+                            <p class="font-semibold">Similarly in Mutual Funds:</p>
+                            <p>Instead of chocolates, you own units representing shares in stocks, bonds, and other securities managed by experts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="reveal">
+                        <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--color-dark);">Key Features Explained</h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Professional Management</h4>
+                                    <p class="text-gray-600">SEBI-certified fund managers with years of experience research markets, analyze companies, and make investment decisions on your behalf, saving you time and effort.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Diversification</h4>
+                                    <p class="text-gray-600">Your money is spread across multiple companies, sectors, and asset classes, reducing the risk of loss from any single investment performing poorly.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Low Minimum Investment</h4>
+                                    <p class="text-gray-600">Start your investment journey with as little as ₹500 through SIP (Systematic Investment Plan) and gradually build wealth over time.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Liquidity</h4>
+                                    <p class="text-gray-600">Most mutual funds allow you to redeem (sell) your units on any business day, providing flexibility to access your money when needed (subject to exit loads).</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Transparency</h4>
+                                    <p class="text-gray-600">Regular reporting of fund performance, portfolio holdings, expenses, and detailed monthly/quarterly statements keep you informed about your investments.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">SEBI Regulated</h4>
+                                    <p class="text-gray-600">All mutual funds are regulated by SEBI (Securities and Exchange Board of India), ensuring investor protection and adherence to strict investment guidelines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== How Mutual Funds Work Section =========== -->
+        <section id="how-it-works" class="py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">How Mutual Funds Work</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Understanding the step-by-step process of mutual fund operations</p>
+                    </div>
+
+                    <!-- Vertical Accordion Cards -->
+                    <div class="reveal max-w-4xl mx-auto space-y-4">
+                        <!-- Step 1 Card -->
+                        <div class="accordion-card" data-step="step1">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">01</span>
+                                    <h3 class="accordion-title">Fund Creation</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="true" aria-controls="step1-content">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                            <div id="step1-content" class="accordion-content">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                An Asset Management Company (AMC) creates a mutual fund with specific investment objectives and strategy outlined in the scheme documents. The fund is registered with SEBI and gets approval to collect money from investors.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>SEBI registration and approval</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Investment objectives defined</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Scheme documents prepared</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-building text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 Card -->
+                        <div class="accordion-card" data-step="step2">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">02</span>
+                                    <h3 class="accordion-title">Investor Participation</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step2-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step2-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Investors like you purchase units of the mutual fund, representing proportional ownership of the fund's holdings and becoming unit holders. Each unit represents a share in the fund's portfolio.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Multiple investors participate</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Units purchased at NAV price</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Proportional ownership acquired</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-users text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 Card -->
+                        <div class="accordion-card" data-step="step3">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">03</span>
+                                    <h3 class="accordion-title">Money Pooling</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step3-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step3-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                All investor money is pooled together to create a large corpus that can be invested across multiple securities for better diversification and professional management.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Large investment corpus created</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Better diversification possible</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Collective investment power</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-piggy-bank text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 Card -->
+                        <div class="accordion-card" data-step="step4">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">04</span>
+                                    <h3 class="accordion-title">Professional Management</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step4-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step4-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Qualified fund managers research, select, and manage investments based on market conditions, fund objectives, and risk parameters. They make buy/sell decisions on behalf of investors.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Expert fund managers</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Continuous market research</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Risk-based decisions</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-user-tie text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 Card -->
+                        <div class="accordion-card" data-step="step5">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">05</span>
+                                    <h3 class="accordion-title">Portfolio Creation</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step5-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step5-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                The fund creates a diversified portfolio of stocks, bonds, or other securities according to the fund's investment strategy and objectives outlined in the scheme document.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Strategic stock selection</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Diversified portfolio</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Objective-based allocation</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-chart-pie text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 6 Card -->
+                        <div class="accordion-card" data-step="step6">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">06</span>
+                                    <h3 class="accordion-title">Returns Distribution</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step6-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step6-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Profits or losses from the portfolio are distributed among investors proportionally based on their number of units held in the fund. NAV reflects the per-unit value.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>NAV-based valuation</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Proportional returns</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Daily NAV calculation</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-chart-line text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NAV Explanation (keeping this as is) -->
+                    <div class="info-box reveal mt-12">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">
+                            <i class="fas fa-calculator mr-2 accent-color"></i>
+                            Understanding NAV (Net Asset Value)
+                        </h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            <strong>NAV</strong> is like the "price per unit" of a mutual fund. It's calculated by dividing the total value of all securities in the fund's portfolio by the total number of units.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg">
+                            <p class="font-semibold mb-2">Formula:</p>
+                            <p class="text-lg">NAV = (Total Portfolio Value - Expenses) ÷ Total Number of Units</p>
+                            <p class="mt-3 text-gray-600">Example: If NAV is ₹20 and you invest ₹10,000, you'll receive 500 units (₹10,000 ÷ ₹20)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Why Invest in Mutual Funds Section =========== -->
+        <section id="why-invest" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Why Invest in Mutual Funds?</h2>
+                    <p class="text-lg mt-4 max-w-3xl mx-auto">Compelling reasons backed by data and expert insights</p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Benefit 1 -->
+                        <div class="edu-card reveal">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-chart-line text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Wealth Creation</h3>
+                                <p class="leading-relaxed mb-4">Harness the power of compounding to build substantial wealth over the long term through systematic investing.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Example: ₹5,000 monthly SIP for 15 years at 12% returns = ₹25+ lakhs</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="edu-card reveal" style="transition-delay: 100ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-calendar-check text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">SIP Benefits</h3>
+                                <p class="leading-relaxed mb-4">Systematic Investment Plans help average out market volatility through rupee cost averaging and build disciplined investing habits.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Start with just ₹500/month and increase gradually</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="edu-card reveal" style="transition-delay: 200ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-percentage text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Tax Benefits</h3>
+                                <p class="leading-relaxed mb-4">ELSS funds offer tax deductions up to ₹1.5 lakh under Section 80C, while long-term capital gains enjoy favorable tax treatment.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">LTCG tax: 10% above ₹1 lakh (equity funds)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div class="edu-card reveal" style="transition-delay: 300ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Risk Management</h3>
+                                <p class="leading-relaxed mb-4">Professional risk assessment and diversification across sectors, market caps, and asset classes protect your investments.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Diversification across 50+ stocks in a single fund</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 5 -->
+                        <div class="edu-card reveal" style="transition-delay: 400ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-user-tie text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Expert Management</h3>
+                                <p class="leading-relaxed mb-4">Benefit from fund managers with advanced degrees (CFA, MBA) and decades of market experience analyzing investments.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Access to institutional-grade research & analysis</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 6 -->
+                        <div class="edu-card reveal" style="transition-delay: 500ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Convenience</h3>
+                                <p class="leading-relaxed mb-4">Easy online investment, automated SIPs, instant portfolio tracking, and transparent reporting make investing hassle-free.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Invest anytime, anywhere via mobile apps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Types of Mutual Funds Section =========== -->
+        <section id="types" class="py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Types of Mutual Funds</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Choose the right fund type based on your investment goals and risk appetite</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Equity Funds -->
+                        <div class="edu-card reveal">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-chart-line text-green-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--color-dark);">Equity Funds</h3>
+                                <p class="text-sm leading-relaxed mb-3">Invest primarily in stocks. Higher risk, higher potential returns. Best for long-term wealth creation (5+ years).</p>
+                                <div class="text-xs bg-green-50 p-2 rounded">
+                                    <p><strong>Risk:</strong> High</p>
+                                    <p><strong>Returns:</strong> 10-15% p.a.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Debt Funds -->
+                        <div class="edu-card reveal" style="transition-delay: 100ms;">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-university text-blue-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--color-dark);">Debt Funds</h3>
+                                <p class="text-sm leading-relaxed mb-3">Invest in bonds, government securities. Lower risk, stable returns. Good for conservative investors.</p>
+                                <div class="text-xs bg-blue-50 p-2 rounded">
+                                    <p><strong>Risk:</strong> Low-Medium</p>
+                                    <p><strong>Returns:</strong> 6-9% p.a.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hybrid Funds -->
+                        <div class="edu-card reveal" style="transition-delay: 200ms;">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-balance-scale text-purple-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--color-dark);">Hybrid Funds</h3>
+                                <p class="text-sm leading-relaxed mb-3">Mix of equity and debt. Balanced risk-return profile. Suitable for moderate risk investors.</p>
+                                <div class="text-xs bg-purple-50 p-2 rounded">
+                                    <p><strong>Risk:</strong> Medium</p>
+                                    <p><strong>Returns:</strong> 8-12% p.a.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ELSS Funds -->
+                        <div class="edu-card reveal" style="transition-delay: 300ms;">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-receipt text-yellow-600 text-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3" style="color: var(--color-dark);">ELSS Funds</h3>
+                                <p class="text-sm leading-relaxed mb-3">Tax-saving equity funds with 3-year lock-in. Get tax deduction up to ₹1.5 lakh under 80C.</p>
+                                <div class="text-xs bg-yellow-50 p-2 rounded">
+                                    <p><strong>Risk:</strong> High</p>
+                                    <p><strong>Lock-in:</strong> 3 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Understanding SIP Section =========== -->
+        <section id="sip" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Understanding SIP</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Systematic Investment Plan - Your gateway to disciplined wealth creation</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                        <div class="reveal">
+                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">What is SIP?</h3>
+                            <p class="text-lg leading-relaxed mb-6">
+                                A <strong>Systematic Investment Plan (SIP)</strong> allows you to invest a fixed amount regularly (monthly, quarterly) in mutual funds, building wealth gradually without needing a large initial investment.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Rupee Cost Averaging</h4>
+                                        <p class="text-gray-600">Buy more units when prices are low, fewer when high</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Power of Compounding</h4>
+                                        <p class="text-gray-600">Your returns generate further returns over time</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Disciplined Investing</h4>
+                                        <p class="text-gray-600">Automated investments remove emotions from investing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <div class="bg-gray-50 p-8 rounded-2xl">
+                                <h4 class="text-xl font-bold mb-4 text-center" style="color: var(--color-dark);">SIP vs Lumpsum</h4>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Minimum Amount:</span>
+                                        <span>₹500/month</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Market Timing:</span>
+                                        <span>Not required</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Risk:</span>
+                                        <span>Lower (averaged)</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Flexibility:</span>
+                                        <span>High (pause/modify)</span>
+                                    </div>
+                                </div>
+                                <div class="mt-6 p-4 bg-white rounded-lg">
+                                    <p class="text-sm font-semibold text-center">Example: ₹5,000 monthly SIP for 10 years at 12% = ₹11.6 lakhs (investment: ₹6 lakhs)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Contact Section =========== -->
+        <section id="contact" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Contact for
+                        Investment Guidance</h2>
+                    <p class="text-lg mt-4 max-w-3xl mx-auto">Get personalized investment advice and support to start your
+                        wealth creation journey</p>
+                </div>
+        
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="reveal">
+                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Get Started Today</h3>
+                            <form class="space-y-6" action="#" method="POST">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name
+                                            *</label>
+                                        <input type="text" id="name" name="name" required class="form-input"
+                                            placeholder="Your full name">
+                                    </div>
+                                    <div>
+                                        <label for="place" class="block text-sm font-semibold text-gray-700 mb-2">City *</label>
+                                        <input type="text" id="place" name="place" required class="form-input"
+                                            placeholder="Your city">
+                                    </div>
+                                </div>
+        
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="age" class="block text-sm font-semibold text-gray-700 mb-2">Age *</label>
+                                        <input type="number" id="age" name="age" min="18" max="100" required class="form-input"
+                                            placeholder="Your age">
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number
+                                            *</label>
+                                        <input type="tel" id="phone" name="phone" required class="form-input"
+                                            placeholder="Your phone number">
+                                    </div>
+                                </div>
+        
+                                <div>
+                                    <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Questions or
+                                        Comments</label>
+                                    <textarea id="message" name="message" rows="5" class="form-input form-textarea"
+                                        placeholder="Tell us about your investment goals, any questions about the app setup, or specific guidance you need..."></textarea>
+                                </div>
+        
+                                <button type="submit"
+                                    class="w-full bg-accent-color text-white px-6 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transition duration-300 shadow-lg hover:shadow-xl">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    Send Message & Get Started
+                                </button>
+        
+                                <p class="text-sm text-gray-500 text-center">
+                                    We'll respond within 24 hours to help you begin your investment journey.
+                                </p>
+                            </form>
+                        </div>
+        
+                        <!-- Why Choose Section -->
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Why Start with Arjun?</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-graduation-cap text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Expert Guidance</h4>
+                                        <p class="text-gray-600">7+ years of experience helping individuals and families achieve
+                                            their financial goals through smart investing.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-user-friends text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Personalized Approach</h4>
+                                        <p class="text-gray-600">Customized investment strategies tailored to your specific
+                                            goals, risk tolerance, and financial situation.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-shield-alt text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Ongoing Support</h4>
+                                        <p class="text-gray-600">Continuous guidance throughout your investment journey with
+                                            regular portfolio reviews and market updates.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-chart-line text-yellow-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-lg mb-2">Proven Track Record</h4>
+                                        <p class="text-gray-600">Successfully guided 500+ families in building wealth through
+                                            systematic and disciplined investing.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                                <div class="grid grid-cols-2 gap-4 text-center">
+                                    <div>
+                                        <div class="text-2xl font-bold accent-color">500+</div>
+                                        <div class="text-sm text-gray-600">Families Guided</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold accent-color">₹50Cr+</div>
+                                        <div class="text-sm text-gray-600">Assets Managed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+<footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6 py-16">
+        <!-- Main Footer Content -->
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <!-- Brand Section -->
+            <div class="md:col-span-2">
+                <h3 class="text-3xl font-bold mb-4 accent-color">Arjun K Raghav</h3>
+                <p class="text-gray-300 mb-6 max-w-md">
+                    Your trusted partner in building generational wealth for Malayali families. Expert financial guidance for a prosperous tomorrow.
+                </p>
+                <!-- AMFI Details -->
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <p class="text-sm text-gray-400">
+                        <span class="font-medium">Name:</span> Arjun K | 
+                        <span class="font-medium">Regn No:</span> ARN-323175 | 
+                        <span class="font-medium">EUIN:</span> E612434
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html#about" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                    <li><a href="index.html#products" class="text-gray-300 hover:text-white transition duration-300">Investment Products</a></li>
+                    <li><a href="index.html#calculators" class="text-gray-300 hover:text-white transition duration-300">Financial Tools</a></li>
+                    <li><a href="index.html#testimonials" class="text-gray-300 hover:text-white transition duration-300">Testimonials</a></li>
+                    <li><a href="start.html" class="text-gray-300 hover:text-white transition duration-300">Start Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Educational Resources -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Learn</h4>
+                <ul class="space-y-3">
+                    <li><a href="mutual.html" class="text-gray-300 hover:text-white transition duration-300">Mutual Funds Guide</a></li>
+                    <li><a href="iap.html" class="text-gray-300 hover:text-white transition duration-300">IAP Education</a></li>
+                    <li><a href="pms.html" class="text-gray-300 hover:text-white transition duration-300">PMS Guide</a></li>
+                    <li><a href="start.html#contact" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Media & Bottom Section -->
+        <div class="border-t border-gray-700 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Social Media Links -->
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="https://www.linkedin.com/in/arjun-k-raghav-a2793a321/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-600 transition duration-300" 
+                       aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arjun_k_raghav/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition duration-300" 
+                       aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-400 transition duration-300" 
+                       aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 text-sm mb-2">
+                        Building wealth for <span class="font-semibold text-white">500+ families</span> since 2018
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 Arjun K Raghav. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-8 pt-6 border-t border-gray-800">
+            <p class="text-xs text-gray-500 text-center max-w-4xl mx-auto leading-relaxed">
+                <strong>Disclaimer:</strong> Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. This website is for informational purposes only and should not be construed as investment advice.
+            </p>
+        </div>
+    </div>
+
+    <!-- Designer Credit Bottom Bar -->
+    <div class="bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 py-3">
+            <div class="text-center">
+                <a href="https://wa.me/8592983978" target="_blank" rel="noopener" 
+                   class="text-xs text-gray-500 hover:text-gray-300 hover:underline transition duration-300">
+                    <i class="fas fa-code text-xs mr-1"></i>
+                    Designed by <span class="font-medium">Codeware Studio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- =========== LinkedIn Notification Pop-up =========== -->
+    <div id="linkedin-popup">
+        <div class="flex-shrink-0">
+            <i class="fab fa-linkedin-in text-3xl text-blue-600 bg-gray-100 p-2 rounded-full"></i>
+        </div>
+        <div class="flex-grow">
+            <p class="font-bold text-sm text-gray-800">Arjun K Raghav posted</p>
+            <p id="popup-text" class="text-sm text-gray-600 mt-1">Check out the latest update...</p>
+        </div>
+        <button id="popup-close-btn" class="close-btn">&times;</button>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="success-popup-overlay" id="successOverlay">
+      <div class="success-popup" id="successPopup">
+        <div class="mb-4">
+            <i class="fas fa-check-circle text-4xl mb-3"></i>
+        </div>
+        <h3>Thank You!</h3>
+        <p>Your message has been sent successfully. We'll contact you within 24 hours.</p>
+        <button type="button" onclick="closeSuccessPopup()">Close</button>
+      </div>
+    </div>
+
+
+    <!-- Replace the existing contact section with the standardized contact form above -->
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

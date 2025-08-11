@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Page Title] | Arjun K Raghav</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- =========== Header =========== -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold accent-color">Arjun K Raghav</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">Home</a>
+                <!-- Active page indicator -->
+                 <a href="mutual.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">Mutual Funds</a>
+                 <a href="iap.html" class="text-gray-600 hover:accent-color font-medium transition duration-300">IAP</a>
+                <span class="accent-color font-bold border-b-2 border-accent-color pb-1">P M S</span>
+                <a href="#contact" class="text-gray-600 hover:accent-color font-medium transition duration-300">Contact</a>
+                <a href="start.html"
+                    class="bg-accent-color text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 shadow-md hover:shadow-lg">Start
+                    Now</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-600 focus:outline-none"><svg
+                        class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg></button></div>
+        </nav>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="index.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="mutual.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Mutual Funds</a>
+            <a href="iap.html" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">IAP </a>
+            <!-- Active page in mobile -->
+            <div class="block py-3 px-6 text-sm bg-accent-color text-white font-semibold"> PMS </div>
+            <a href="#contact" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Contact</a>
+            <a href="start.html" class="block py-4 px-6 text-sm bg-accent-color text-white text-center rounded-b-lg">Start
+                Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Service Hero Section =========== -->
+        <section class="service-hero-bg">
+            <div class="container mx-auto px-4 sm:px-6 py-20 md:py-24 relative">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="text-white reveal">
+                            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                                Complete Guide to <span class="highlight-color">Portfolio Management Services</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl mb-8 text-white/90">
+                                Everything you need to know about PMS investing - from basics to advanced strategies. Professional portfolio management for elite investors.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#what-is-pms" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-center">
+                                    <i class="fas fa-graduation-cap mr-2"></i>
+                                    Start Learning
+                                </a>
+                                <a href="#contact" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300 text-center">
+                                    <i class="fas fa-phone mr-2"></i>
+                                    Get Expert Advice
+                                </a>
+                            </div>
+                        </div>
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                                <h3 class="text-2xl font-bold text-white mb-6 text-center">What You'll Learn</h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>What is PMS & How it works</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Types of PMS services explained</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>PMS vs Mutual Funds comparison</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Investment requirements & eligibility</span>
+                                    </div>
+                                    <div class="flex items-center text-white">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                            <i class="fas fa-check text-sm"></i>
+                                        </div>
+                                        <span>Portfolio customization & ownership</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== What is PMS Section =========== -->
+        <section id="what-is-pms" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">What is Portfolio Management Service (PMS)?</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Understanding PMS with simple explanations and real-world analogies</p>
+                    </div>
+                    
+                    <!-- Simple Definition -->
+                    <div class="reveal mb-12">
+                        <div class="bg-gray-50 p-8 rounded-2xl">
+                            <p class="text-xl leading-relaxed mb-6">
+                                <span class="font-bold accent-color">Portfolio Management Service (PMS)</span> is a professional investment solution where SEBI-registered portfolio managers create and manage a personalized portfolio of securities on behalf of high-net-worth clients. Unlike mutual funds, you directly own the underlying securities.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                PMS provides <span class="font-semibold">customized investment solutions</span> based on your risk appetite, financial goals, and investment horizon. The minimum investment is ₹50 lakh as mandated by SEBI, making it suitable for elite investors seeking personalized wealth management.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Analogy Box -->
+                    <div class="analogy-box reveal">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--color-highlight);">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            Simple Analogy: The Personal Designer
+                        </h3>
+                        <p class="text-lg leading-relaxed mb-4">
+                            Imagine you want to build a luxury home. Instead of buying a ready-made apartment, you hire a <strong>renowned architect</strong> who designs a custom home based on your lifestyle, preferences, and budget requirements.
+                        </p>
+                        <p class="text-lg leading-relaxed mb-4">
+                            The architect selects the best materials, supervises construction, and makes adjustments as needed. You own the land and every brick of the house. The architect charges a fee for their expertise and ongoing maintenance.
+                        </p>
+                        <div class="mt-6 p-4 bg-white/50 rounded-lg">
+                            <p class="font-semibold">Similarly with PMS:</p>
+                            <p>Instead of an architect, you have a portfolio manager who creates a custom investment portfolio. You own the actual stocks and securities, not just units in a pooled fund.</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="reveal">
+                        <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--color-dark);">Key Features Explained</h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Direct Ownership</h4>
+                                    <p class="text-gray-600">You directly own the securities in your demat account, not units in a fund. This provides complete transparency and control over your investments.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Customized Portfolios</h4>
+                                    <p class="text-gray-600">Tailored investment strategies based on your specific financial goals, risk tolerance, and investment preferences.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">High Minimum Investment</h4>
+                                    <p class="text-gray-600">SEBI-mandated minimum of ₹50 lakh ensures service quality and suitability for high-net-worth individuals.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Professional Management</h4>
+                                    <p class="text-gray-600">Experienced portfolio managers make investment decisions based on market research, analysis, and strategic insights.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">Focused Portfolios</h4>
+                                    <p class="text-gray-600">Concentrated portfolios with 15-25 carefully selected companies for superior long-term wealth creation.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2" style="color: var(--color-dark);">SEBI Regulated</h4>
+                                    <p class="text-gray-600">All PMS providers are regulated by SEBI ensuring investor protection and adherence to strict guidelines.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== How PMS Works Section =========== -->
+        <section id="how-it-works" class="py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">How PMS Works</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Understanding the step-by-step process of Portfolio Management Services</p>
+                    </div>
+
+                    <!-- Vertical Accordion Cards -->
+                    <div class="reveal max-w-4xl mx-auto space-y-4">
+                        <!-- Step 1 Card -->
+                        <div class="accordion-card" data-step="step1">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">01</span>
+                                    <h3 class="accordion-title">Client Profiling</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="true" aria-controls="step1-content">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                            <div id="step1-content" class="accordion-content">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Portfolio manager conducts comprehensive assessment of client's financial goals, risk tolerance, investment horizon, and creates a customized investment strategy. This forms the foundation for personalized wealth management.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Financial goal assessment</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Risk tolerance evaluation</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Investment horizon planning</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-user-check text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 Card -->
+                        <div class="accordion-card" data-step="step2">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">02</span>
+                                    <h3 class="accordion-title">Agreement Signing</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step2-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step2-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Client signs the comprehensive PMS agreement outlining investment mandate, fee structure, performance benchmarks, and terms of engagement with the portfolio manager. This legal document ensures clarity and protection.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Investment mandate definition</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Fee structure transparency</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Legal compliance documentation</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-file-contract text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 Card -->
+                        <div class="accordion-card" data-step="step3">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">03</span>
+                                    <h3 class="accordion-title">Portfolio Construction</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step3-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step3-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Portfolio manager researches and selects 15-25 high-conviction stocks based on the agreed investment strategy and risk parameters. Each stock is carefully chosen for its potential and alignment with client objectives.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>High-conviction stock selection</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Concentrated portfolio approach</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Strategic asset allocation</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-building text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 Card -->
+                        <div class="accordion-card" data-step="step4">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">04</span>
+                                    <h3 class="accordion-title">Direct Investment</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step4-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step4-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Securities are purchased directly in client's demat account, ensuring direct ownership and complete transparency of holdings. This provides clients with full control and visibility over their investments.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Direct stock ownership</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Complete transparency</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Client demat account holdings</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-certificate text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 Card -->
+                        <div class="accordion-card" data-step="step5">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">05</span>
+                                    <h3 class="accordion-title">Active Monitoring</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step5-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step5-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Continuous monitoring of portfolio performance, market conditions, and company fundamentals with regular rebalancing as needed. This ensures optimal portfolio performance and risk management.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Continuous performance monitoring</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Market condition analysis</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Regular rebalancing</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-chart-line text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 6 Card -->
+                        <div class="accordion-card" data-step="step6">
+                            <div class="accordion-header">
+                                <div class="flex items-center gap-4">
+                                    <span class="step-number">06</span>
+                                    <h3 class="accordion-title">Regular Reporting</h3>
+                                </div>
+                                <button class="accordion-toggle" aria-expanded="false" aria-controls="step6-content">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div id="step6-content" class="accordion-content hidden">
+                                <div class="content-wrapper">
+                                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                                        <div>
+                                            <p class="text-lg leading-relaxed mb-6">
+                                                Detailed monthly reports on portfolio performance, holdings, transactions, and market outlook provided to clients. This ensures complete transparency and informed decision-making.
+                                            </p>
+                                            <div class="space-y-3">
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Monthly performance reports</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Transaction details</span>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                                    <span>Market outlook analysis</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <i class="fas fa-file-alt text-white text-2xl"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PMS vs MF Comparison (keeping this as is) -->
+                    <div class="info-box reveal mt-12">
+                        <h3 class="text-2xl font-bold mb-4" style="color: var(--color-dark);">
+                            <i class="fas fa-balance-scale mr-2 accent-color"></i>
+                            PMS vs Mutual Funds: Key Differences
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="font-semibold mb-3">Mutual Funds</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Pool of investor money</li>
+                                    <li>• Units in a fund</li>
+                                    <li>• Minimum ₹500 investment</li>
+                                    <li>• Standardized portfolio</li>
+                                    <li>• Limited customization</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-3">Portfolio Management Services</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Individual client portfolios</li>
+                                    <li>• Direct ownership of stocks</li>
+                                    <li>• Minimum ₹50 lakh investment</li>
+                                    <li>• Fully customized portfolio</li>
+                                    <li>• High degree of personalization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Why Choose PMS Section =========== -->
+        <section id="why-choose-pms" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Why Choose PMS?</h2>
+                    <p class="text-lg mt-4 max-w-3xl mx-auto">Compelling reasons for high-net-worth individuals to choose Portfolio Management Services</p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Benefit 1 -->
+                        <div class="edu-card reveal">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-crown text-white text-2xl"></i>
+
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Elite Investment Access</h3>
+                                <p class="leading-relaxed mb-4">Access to exclusive investment opportunities and strategies typically reserved for ultra-high-net-worth individuals.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Focused portfolios of 15-25 high-conviction stocks</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="edu-card reveal" style="transition-delay: 100ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-cog text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Complete Customization</h3>
+                                <p class="leading-relaxed mb-4">Fully tailored portfolios based on your specific goals, risk appetite, and investment preferences - no two portfolios are identical.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Personalized investment strategies</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="edu-card reveal" style="transition-delay: 200ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-certificate text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Direct Ownership</h3>
+                                <p class="leading-relaxed mb-4">Own stocks directly in your demat account, receive dividends, participate in corporate actions, and enjoy voting rights.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Complete transparency of holdings</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div class="edu-card reveal" style="transition-delay: 300ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-user-tie text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Dedicated Manager</h3>
+                                <p class="leading-relaxed mb-4">Personal attention from experienced portfolio managers with regular interaction and portfolio discussions.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Direct access to fund manager</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 5 -->
+                        <div class="edu-card reveal" style="transition-delay: 400ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-chart-line text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Performance Potential</h3>
+                                <p class="leading-relaxed mb-4">Higher return potential compared to mutual funds due to concentrated, high-conviction investment approach.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Alpha generation focus</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 6 -->
+                        <div class="edu-card reveal" style="transition-delay: 500ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-percentage text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Tax Efficiency</h3>
+                                <p class="leading-relaxed mb-4">Better tax efficiency as you pay tax only on realized gains from actual stock sales, not on fund-level transactions.</p>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <p class="text-sm font-semibold">Control over tax timing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Types of PMS Section =========== -->
+        <section id="types" class="py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Types of PMS</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Choose the right PMS type based on your involvement preference and investment style</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Discretionary PMS -->
+                        <div class="edu-card reveal">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-chess text-green-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Discretionary PMS</h3>
+                                <p class="text-sm leading-relaxed mb-4">Portfolio manager has full authority to make investment decisions within agreed guidelines without seeking prior approval for each transaction.</p>
+                                <div class="text-xs bg-green-50 p-3 rounded">
+                                    <p><strong>Control:</strong> Fund Manager</p>
+                                    <p><strong>Approval:</strong> Not Required</p>
+                                    <p><strong>Best For:</strong> Busy Professionals</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Non-Discretionary PMS -->
+                        <div class="edu-card reveal" style="transition-delay: 100ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Non-Discretionary PMS</h3>
+                                <p class="text-sm leading-relaxed mb-4">Portfolio manager provides investment advice and recommendations, but client approval is required before executing any transactions.</p>
+                                <div class="text-xs bg-blue-50 p-3 rounded">
+                                    <p><strong>Control:</strong> Shared</p>
+                                    <p><strong>Approval:</strong> Client Required</p>
+                                    <p><strong>Best For:</strong> Active Participants</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advisory PMS -->
+                        <div class="edu-card reveal" style="transition-delay: 200ms;">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-comments text-purple-600 text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold mb-4" style="color: var(--color-dark);">Advisory PMS</h3>
+                                <p class="text-sm leading-relaxed mb-4">Portfolio manager only provides investment advice and recommendations. Client makes final decisions and executes transactions independently.</p>
+                                <div class="text-xs bg-purple-50 p-3 rounded">
+                                    <p><strong>Control:</strong> Client</p>
+                                    <p><strong>Execution:</strong> Client</p>
+                                    <p><strong>Best For:</strong> Self-Directed Investors</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PMS Strategy Types -->
+                    <div class="mt-16 reveal">
+                        <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--color-dark);">Popular PMS Strategy Types</h3>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="edu-card">
+                                <h4 class="text-lg font-bold mb-3 accent-color">Large Cap PMS</h4>
+                                <p class="text-sm leading-relaxed">Focus on established large-cap companies with stable business models and consistent returns.</p>
+                            </div>
+                            
+                            <div class="edu-card">
+                                <h4 class="text-lg font-bold mb-3 accent-color">Mid & Small Cap PMS</h4>
+                                <p class="text-sm leading-relaxed">Concentrate on mid and small-cap companies with high growth potential and market opportunities.</p>
+                            </div>
+
+                            <div class="edu-card">
+                                <h4 class="text-lg font-bold mb-3 accent-color">Thematic PMS</h4>
+                                <p class="text-sm leading-relaxed">Invest in specific themes like technology, healthcare, infrastructure, or emerging trends.</p>
+                            </div>
+
+                            <div class="edu-card">
+                                <h4 class="text-lg font-bold mb-3 accent-color">Multi-Cap PMS</h4>
+                                <p class="text-sm leading-relaxed">Diversified approach across large, mid, and small-cap stocks for balanced risk-return profile.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Investment Requirements Section =========== -->
+        <section id="investment-requirements" class="bg-white py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 reveal">
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Investment Requirements</h2>
+                        <p class="text-lg mt-4 max-w-3xl mx-auto">Understanding eligibility criteria and investment thresholds for PMS</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                        <div class="reveal">
+                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Who Can Invest in PMS?</h3>
+                            <p class="text-lg leading-relaxed mb-6">
+                                As per <strong>SEBI regulations</strong>, PMS is designed for high-net-worth individuals (HNIs) and institutions with substantial investment corpus and risk-bearing capacity.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Minimum Investment</h4>
+                                        <p class="text-gray-600">₹50 lakh per client as mandated by SEBI</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Target Investors</h4>
+                                        <p class="text-gray-600">HNIs, Ultra HNIs, NRIs, Corporates, Institutions</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-3 h-3 bg-accent-color rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold">Investment Horizon</h4>
+                                        <p class="text-gray-600">Typically 3-5 years for optimal results</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reveal" style="transition-delay: 200ms;">
+                            <div class="bg-gray-50 p-8 rounded-2xl">
+                                <h4 class="text-xl font-bold mb-4 text-center" style="color: var(--color-dark);">Fee Structure</h4>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Management Fee:</span>
+                                        <span>1.5% - 3% per annum</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Performance Fee:</span>
+                                        <span>10% - 20% of profits</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Entry/Exit Load:</span>
+                                        <span>Usually Nil</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="font-semibold">Other Charges:</span>
+                                        <span>Brokerage, Taxes</span>
+                                    </div>
+                                </div>
+                                <div class="mt-6 p-4 bg-white rounded-lg">
+                                    <p class="text-sm font-semibold text-center">Example: ₹1 crore investment may cost ₹2-3 lakh annually in management fees</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Contact Section =========== -->
+        <section id="contact" class="bg-white py-20 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Contact for Investment Guidance</h2>
+            <p class="text-lg mt-4 max-w-3xl mx-auto">Get personalized investment advice and support to start your wealth creation journey</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="reveal">
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Get Started Today</h3>
+                    <form class="space-y-6" action="#" method="POST">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label for="place" class="block text-sm font-semibold text-gray-700 mb-2">City *</label>
+                                <input type="text" id="place" name="place" required class="form-input" placeholder="Your city">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="age" class="block text-sm font-semibold text-gray-700 mb-2">Age *</label>
+                                <input type="number" id="age" name="age" min="18" max="100" required class="form-input" placeholder="Your age">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required class="form-input" placeholder="Your phone number">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Questions or Comments</label>
+                            <textarea id="message" name="message" rows="5" class="form-input form-textarea" placeholder="Tell us about your investment goals, any questions about the app setup, or specific guidance you need..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent-color text-white px-6 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transition duration-300 shadow-lg hover:shadow-xl">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message & Get Started
+                        </button>
+                        
+                        <p class="text-sm text-gray-500 text-center">
+                            We'll respond within 24 hours to help you begin your investment journey.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Why Choose Section -->
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Why Start with Arjun?</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Expert Guidance</h4>
+                                <p class="text-gray-600">7+ years of experience helping individuals and families achieve their financial goals through smart investing.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-user-friends text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Personalized Approach</h4>
+                                <p class="text-gray-600">Customized investment strategies tailored to your specific goals, risk tolerance, and financial situation.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Ongoing Support</h4>
+                                <p class="text-gray-600">Continuous guidance throughout your investment journey with regular portfolio reviews and market updates.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-chart-line text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">Proven Track Record</h4>
+                                <p class="text-gray-600">Successfully guided 500+ families in building wealth through systematic and disciplined investing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold accent-color">500+</div>
+                                <div class="text-sm text-gray-600">Families Guided</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold accent-color">₹50Cr+</div>
+                                <div class="text-sm text-gray-600">Assets Managed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+<footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6 py-16">
+        <!-- Main Footer Content -->
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <!-- Brand Section -->
+            <div class="md:col-span-2">
+                <h3 class="text-3xl font-bold mb-4 accent-color">Arjun K Raghav</h3>
+                <p class="text-gray-300 mb-6 max-w-md">
+                    Your trusted partner in building generational wealth for Malayali families. Expert financial guidance for a prosperous tomorrow.
+                </p>
+                <!-- AMFI Details -->
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <p class="text-sm text-gray-400">
+                        <span class="font-medium">Name:</span> Arjun K | 
+                        <span class="font-medium">Regn No:</span> ARN-323175 | 
+                        <span class="font-medium">EUIN:</span> E612434
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="index.html#about" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                    <li><a href="index.html#products" class="text-gray-300 hover:text-white transition duration-300">Investment Products</a></li>
+                    <li><a href="index.html#calculators" class="text-gray-300 hover:text-white transition duration-300">Financial Tools</a></li>
+                    <li><a href="index.html#testimonials" class="text-gray-300 hover:text-white transition duration-300">Testimonials</a></li>
+                    <li><a href="start.html" class="text-gray-300 hover:text-white transition duration-300">Start Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Educational Resources -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Learn</h4>
+                <ul class="space-y-3">
+                    <li><a href="mutual.html" class="text-gray-300 hover:text-white transition duration-300">Mutual Funds Guide</a></li>
+                    <li><a href="iap.html" class="text-gray-300 hover:text-white transition duration-300">IAP Education</a></li>
+                    <li><a href="pms.html" class="text-gray-300 hover:text-white transition duration-300">PMS Guide</a></li>
+                    <li><a href="start.html#contact" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Media & Bottom Section -->
+        <div class="border-t border-gray-700 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Social Media Links -->
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="https://www.linkedin.com/in/arjun-k-raghav-a2793a321/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-600 transition duration-300" 
+                       aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arjun_k_raghav/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition duration-300" 
+                       aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-400 transition duration-300" 
+                       aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 text-sm mb-2">
+                        Building wealth for <span class="font-semibold text-white">500+ families</span> since 2018
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 Arjun K Raghav. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-8 pt-6 border-t border-gray-800">
+            <p class="text-xs text-gray-500 text-center max-w-4xl mx-auto leading-relaxed">
+                <strong>Disclaimer:</strong> Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. This website is for informational purposes only and should not be construed as investment advice.
+            </p>
+        </div>
+    </div>
+
+    <!-- Designer Credit Bottom Bar -->
+    <div class="bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 py-3">
+            <div class="text-center">
+                <a href="https://wa.me/8592983978" target="_blank" rel="noopener" 
+                   class="text-xs text-gray-500 hover:text-gray-300 hover:underline transition duration-300">
+                    <i class="fas fa-code text-xs mr-1"></i>
+                    Designed by <span class="font-medium">Codeware Studio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- =========== LinkedIn Notification Pop-up =========== -->
+    <div id="linkedin-popup">
+        <div class="flex-shrink-0">
+            <i class="fab fa-linkedin-in text-3xl text-blue-600 bg-gray-100 p-2 rounded-full"></i>
+        </div>
+        <div class="flex-grow">
+            <p class="font-bold text-sm text-gray-800">Arjun K Raghav posted</p>
+            <p id="popup-text" class="text-sm text-gray-600 mt-1">Check out the latest update...</p>
+        </div>
+        <button id="popup-close-btn" class="close-btn">&times;</button>
+    </div>
+
+
+
+    <!-- Success Popup -->
+    <div class="success-popup-overlay" id="successOverlay">
+        <div class="success-popup" id="successPopup">
+            <div class="mb-4">
+                <i class="fas fa-check-circle text-4xl mb-3"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll contact you within 24 hours.</p>
+            <button type="button" onclick="closeSuccessPopup()">Close</button>
+        </div>
+    </div>
+
+    <!-- Replace the existing contact section with the standardized contact form above -->
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

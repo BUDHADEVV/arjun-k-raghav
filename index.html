@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun K Raghav | Investment Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- =========== Header =========== -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-40">
+        <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold accent-color">Arjun K Raghav</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:accent-color font-medium transition duration-300">About</a>
+                <a href="#videos" class="text-gray-600 hover:accent-color font-medium transition duration-300">Videos</a>
+                <a href="#products" class="text-gray-600 hover:accent-color font-medium transition duration-300">Products</a>
+                <a href="#calculators" class="text-gray-600 hover:accent-color font-medium transition duration-300">Calculators</a>
+                <a href="#testimonials" class="text-gray-600 hover:accent-color font-medium transition duration-300">Testimonials</a>
+                <a href="start.html#contact" class="text-gray-600 hover:accent-color font-medium transition duration-300">Contact</a>
+                <a href="start.html" class="bg-accent-color text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 shadow-md hover:shadow-lg">Start Now</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-600 focus:outline-none"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#about" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">About</a>
+            <a href="#videos" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Videos</a>
+            <a href="#products" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Products</a>
+            <a href="#calculators" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Calculators</a>
+            <a href="#testimonials" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Testimonials</a>
+            <a href="start.html#contact" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Contact</a>
+            <a href="start.html" class="block py-4 px-6 text-sm bg-accent-color text-white text-center rounded-b-lg">Start Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Hero Section =========== -->
+        <section class="hero-bg">
+            <div class="container mx-auto px-4 sm:px-6 py-24 md:py-48 text-center">
+                <div class="max-w-4xl mx-auto reveal">
+                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight" style="color: var(--color-dark);">
+                        Building Generational Wealth for <span class="accent-color">Malayali Families</span>
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl mt-6 max-w-2xl mx-auto">
+                        Your trusted partner in securing the financial future of families across Kerala. Expert guidance for a prosperous tomorrow.
+                    </p>
+                    <div class="mt-10">
+                         <a href="#products" class="bg-accent-color text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-opacity-90 transition duration-300 inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Explore Investment Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- =========== About Section =========== -->
+<section id="about" class="bg-white overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-6 py-20 md:py-32 relative">
+        <div class="grid md:grid-cols-5 gap-12 items-center relative z-10">
+            <!-- Text Content -->
+            <div class="md:col-span-3 reveal">
+                <h2 class="text-lg font-semibold accent-color mb-3">MY VISION</h2>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight" style="color: var(--color-dark);">
+                    Empowering <span class="about-highlight">10,000 Families</span> with Financial Wisdom.
+                </h1>
+                <p class="text-base sm:text-lg mt-6 max-w-2xl">
+                    My vision is to help Malayali families invest wisely and build lasting wealth. I aim to empower over 10,000 families in the coming years through the right financial guidance.
+                </p>
+
+                <!-- Expertise Bullet Points -->
+                <div class="mt-6 space-y-3">
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-accent-color rounded-full mr-3"></div>
+                        <span class="text-base font-medium">Helping Malayali Families and NRIs to invest wisely</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 bg-accent-color rounded-full mr-3"></div>
+                        <span class="text-base font-medium">Lumpsum Investment Specialist | SIP Planning</span>
+                    </div>
+                    
+                    
+                </div>
+                
+                <!-- AMFI Registration Details -->
+                <div class="mt-6 p-4 bg-gray-50 rounded-lg border-l-4 border-accent-color">
+                    <p class="text-sm text-gray-700">
+                        <span class="font-medium">Name:</span> Arjun K | 
+                        <span class="font-medium">Regn No:</span> ARN-323175 | 
+                        <span class="font-medium">EUIN:</span> E612434
+                    </p>
+                </div>
+                
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-chart-line text-2xl accent-color"></i>
+                        <div><span class="font-bold text-lg" style="color: var(--color-dark);">7+ Years</span><br>Market Experience</div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-users text-2xl accent-color"></i>
+                        <div><span class="font-bold text-lg" style="color: var(--color-dark);">500+ Families</span><br>Successfully Guided</div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-trophy text-2xl accent-color"></i>
+                        <div><span class="font-bold text-lg" style="color: var(--color-dark);">Kerala's Leading</span><br>Investor</div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-bullseye text-2xl accent-color"></i>
+                        <div><span class="font-bold text-lg" style="color: var(--color-dark);">98% Success</span><br>in Portfolio Growth</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="md:col-span-2 flex justify-center md:justify-end reveal" style="transition-delay: 150ms;">
+                <div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl transform md:rotate-3 transition hover:rotate-0 hover:scale-105">
+                    <img src="arjunkraghav.jpg" alt="Arjun K Raghav Portrait" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Simple HR Line -->
+<hr class="container mx-auto max-w-4xl border-t border-gray-300 my-12">
+
+
+
+        <!-- =========== Educational Videos Section =========== -->
+<section id="videos" class="py-20 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 sm:mb-16 reveal">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Please Watch These Videos</h2>
+            <p class="text-base sm:text-lg mt-4 max-w-3xl mx-auto">Essential knowledge about mutual funds and investments to help you make informed financial decisions</p>
+        </div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Video 1 -->
+                <div class="video-card reveal">
+                    <iframe src="https://www.youtube.com/embed/wDMFCjH7QFE" 
+                            title="Mutual Fund Basics Video 1" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                    <div class="video-card-content">
+                        <h3 class="video-card-title">Benefits Mutual Fund</h3>
+                        <p class="video-card-description">Learn the basic concepts and principles of mutual fund investing</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-card reveal" style="transition-delay: 100ms;">
+                    <iframe src="https://www.youtube.com/embed/6zmiWq2TtWY" 
+                            title="Mutual Fund Basics Video 2" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                    <div class="video-card-content">
+                        <h3 class="video-card-title">What is Mutual Fund ?</h3>
+                        <p class="video-card-description">A mutual fund pools money from investors to invest in diversified assets.</p>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-card reveal" style="transition-delay: 200ms;">
+                    <iframe src="https://www.youtube.com/embed/2R3gj_jRLYc" 
+                            title="Mutual Fund Basics Video 3" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                    <div class="video-card-content">
+                        <h3 class="video-card-title">SIP Benefits</h3>
+                        <p class="video-card-description">Learn how to identify and manage risks to make smarter, more secure investment decisions.</p>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-card reveal" style="transition-delay: 300ms;">
+                    <iframe src="https://www.youtube.com/embed/NXGHqVCPKwY" 
+                            title="Mutual Fund Basics Video 4" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                    <div class="video-card-content">
+                        <h3 class="video-card-title">What is Inflation ?</h3>
+                        <p class="video-card-description">Inflation is the rise in prices over time, reducing your money’s purchasing power.</p>
+                    </div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="video-card reveal" style="transition-delay: 400ms;">
+                    <iframe src="https://www.youtube.com/embed/cWsNTQOo18s" 
+                            title="Mutual Fund Basics Video 5" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                    <div class="video-card-content">
+                        <h3 class="video-card-title">Power of Compounding</h3>
+                        <p class="video-card-description">Compounding grows your money by earning returns on returns over time.</p>
+                    </div>
+                </div>
+
+                <!-- Video 6 -->
+                <div class="video-card reveal" style="transition-delay: 500ms;">
+                    <iframe src="https://www.youtube.com/embed/fBtgUiemvaI" 
+                            title="Mutual Fund Basics Video 6" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                    <div class="video-card-content">
+                        <h3 class="video-card-title">How to Invest in MF ?</h3>
+                        <p class="video-card-description">Choose a fund, complete KYC, and start investing easily online.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+<!-- Simple HR Line -->
+<hr class="container mx-auto max-w-4xl border-t border-gray-300 my-12">
+
+
+
+
+        <!-- =========== Products Section =========== -->
+<section id="products" class="py-20 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12 sm:mb-16 reveal">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Investment Products</h2>
+            <p class="text-base sm:text-lg mt-4 max-w-2xl mx-auto">Tailored solutions designed to grow and protect your family's capital.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product Card 1 - Mutual Funds -->
+            <a href="mutual.html" class="product-card reveal block cursor-pointer">
+                <div class="illustration">
+                    <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 130L40 100L70 120L100 60L130 90" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 130H130" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="h-full flex flex-col justify-between">
+                    <h3><span>Mutual Funds</span><br><span>(Lumpsum & SIP)</span></h3>
+                    <div class="learn-more">Learn more <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div></div>
+                </div>
+            </a>
+
+            <!-- Product Card 2 - IAP (Dark) -->
+            <a href="iap.html" class="product-card dark reveal block cursor-pointer" style="transition-delay: 100ms;">
+                <div class="illustration">
+                    <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="40" width="100" height="60" rx="10" stroke="white" stroke-width="4"/>
+                        <path d="M40 70L60 90L80 60L100 80" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="h-full flex flex-col justify-between">
+                    <h3><span>IAP</span><br><span>(Intelligent Advisory)</span></h3>
+                    <div class="learn-more">Learn more <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div></div>
+                </div>
+            </a>
+
+            <!-- Product Card 3 - PMS -->
+            <a href="pms.html" class="product-card reveal block cursor-pointer" style="transition-delay: 200ms;">
+                <div class="illustration">
+                    <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M70 120C100.376 120 125 95.3757 125 65C125 34.6243 100.376 10 70 10C39.6243 10 15 34.6243 15 65C15 78.4354 20.3342 90.6133 29 100L15 125L40 111C48.3867 117.666 58.5646 120 70 120Z" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="h-full flex flex-col justify-between">
+                    <h3><span>PMS</span><br><span>(Portfolio Management)</span></h3>
+                    <div class="learn-more">Learn more <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <!-- =========== Calculators Section =========== -->
+        <section id="calculators" class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Financial Tools</h2>
+                    <p class="text-base sm:text-lg mt-4 max-w-2xl mx-auto">Empower your decisions with our easy-to-use financial calculators.</p>
+                </div>
+                
+                <div class="flex justify-center flex-nowrap overflow-x-auto -mx-4 sm:-mx-6 px-4 sm:px-6 border-b border-gray-200 mb-10 reveal">
+                    <button class="calculator-tab active" data-tab="sip">SIP</button>
+                    <button class="calculator-tab" data-tab="step-up-sip">Step-Up SIP</button>
+                    <button class="calculator-tab" data-tab="inflation">Inflation</button>
+                    <button class="calculator-tab" data-tab="swp">SWP</button>
+                </div>
+
+                <div class="max-w-6xl mx-auto reveal">
+                    <!-- Calculator Panels Wrapper -->
+                    <div class="bg-gray-50/50 p-4 sm:p-8 rounded-2xl shadow-inner">
+                        <!-- SIP Calculator Panel -->
+                        <div id="sip-panel" class="calculator-panel">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                                <div class="lg:col-span-2 space-y-6">
+                                    <!-- Inputs -->
+                                    <div>
+                                        <label for="sipAmount" class="font-semibold text-gray-700">Monthly Investment</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="sipAmountSlider" type="range" min="500" max="100000" step="500" value="5000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="sipAmount" type="number" value="5000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="sipRate" class="font-semibold text-gray-700">Expected Return Rate</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="sipRateSlider" type="range" min="1" max="30" step="0.5" value="12">
+                                            <div class="value-box"><span class="unit">%</span><input id="sipRate" type="number" value="12" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="sipYears" class="font-semibold text-gray-700">Time Period</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="sipYearsSlider" type="range" min="1" max="40" step="1" value="15">
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="sipYears" type="number" value="15" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 flex flex-col">
+                                    <!-- Results -->
+                                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                                        <p class="text-gray-500">Total Value</p>
+                                        <p id="sipTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 25,22,881</p>
+                                        <div class="flex justify-between text-sm mt-4">
+                                            <span>Invested: <span id="sipInvested" class="font-semibold">₹ 9,00,000</span></span>
+                                            <span>Returns: <span id="sipReturns" class="font-semibold">₹ 16,22,881</span></span>
+                                        </div>
+                                    </div>
+                                    <!-- Graph -->
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas id="sipChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step-Up SIP Calculator Panel -->
+                        <div id="step-up-sip-panel" class="calculator-panel hidden">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                                <div class="lg:col-span-2 space-y-6">
+                                    <div>
+                                        <label for="stepUpSipAmount" class="font-semibold text-gray-700">Initial Monthly Investment</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="stepUpSipAmountSlider" type="range" min="500" max="100000" step="500" value="5000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="stepUpSipAmount" type="number" value="5000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="stepUpSipRate" class="font-semibold text-gray-700">Expected Return Rate</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="stepUpSipRateSlider" type="range" min="1" max="30" step="0.5" value="12">
+                                            <div class="value-box"><span class="unit">%</span><input id="stepUpSipRate" type="number" value="12" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="stepUpSipYears" class="font-semibold text-gray-700">Time Period</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="stepUpSipYearsSlider" type="range" min="1" max="40" step="1" value="15">
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="stepUpSipYears" type="number" value="15" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="stepUpSipIncrement" class="font-semibold text-gray-700">Annual Step-Up</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="stepUpSipIncrementSlider" type="range" min="0" max="25" step="1" value="10">
+                                            <div class="value-box"><span class="unit">%</span><input id="stepUpSipIncrement" type="number" value="10" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 flex flex-col">
+                                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                                        <p class="text-gray-500">Total Value</p>
+                                        <p id="stepUpSipTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 0</p>
+                                        <div class="flex justify-between text-sm mt-4">
+                                            <span>Invested: <span id="stepUpSipInvested" class="font-semibold">₹ 0</span></span>
+                                            <span>Returns: <span id="stepUpSipReturns" class="font-semibold">₹ 0</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas id="stepUpSipChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Inflation Calculator Panel -->
+                        <div id="inflation-panel" class="calculator-panel hidden">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                                <div class="lg:col-span-2 space-y-6">
+                                    <div>
+                                        <label for="inflationCost" class="font-semibold text-gray-700">Today's Cost</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="inflationCostSlider" type="range" min="1000" max="1000000" step="1000" value="100000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="inflationCost" type="number" value="100000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="inflationRate" class="font-semibold text-gray-700">Inflation Rate</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="inflationRateSlider" type="range" min="1" max="20" step="0.5" value="6">
+                                            <div class="value-box"><span class="unit">%</span><input id="inflationRate" type="number" value="6" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="inflationYears" class="font-semibold text-gray-700">Time Period</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="inflationYearsSlider" type="range" min="1" max="40" step="1" value="10">
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="inflationYears" type="number" value="10" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 flex flex-col">
+                                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                                        <p class="text-gray-500">Future Cost</p>
+                                        <p id="inflationTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 1,79,085</p>
+                                        <div class="flex justify-center text-sm mt-4">
+                                            <span>Today's Cost: <span id="inflationStartValue" class="font-semibold">₹ 1,00,000</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas id="inflationChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SWP Calculator Panel -->
+                        <div id="swp-panel" class="calculator-panel hidden">
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                                <div class="lg:col-span-2 space-y-6">
+                                    <div>
+                                        <label for="swpInvestment" class="font-semibold text-gray-700">Total Investment</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="swpInvestmentSlider" type="range" min="100000" max="5000000" step="10000" value="1000000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="swpInvestment" type="number" value="1000000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="swpWithdrawal" class="font-semibold text-gray-700">Withdrawal per month</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="swpWithdrawalSlider" type="range" min="1000" max="100000" step="1000" value="8000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="swpWithdrawal" type="number" value="8000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="swpRate" class="font-semibold text-gray-700">Expected Return Rate</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="swpRateSlider" type="range" min="1" max="20" step="0.5" value="8">
+                                            <div class="value-box"><span class="unit">%</span><input id="swpRate" type="number" value="8" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="swpYears" class="font-semibold text-gray-700">Time Period</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="swpYearsSlider" type="range" min="1" max="40" step="1" value="10">
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="swpYears" type="number" value="10" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 flex flex-col">
+                                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                                        <p class="text-gray-500">Final Portfolio Value</p>
+                                        <p id="swpTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 0</p>
+                                        <div class="flex justify-center text-sm mt-4">
+                                            <span>Total Withdrawn: <span id="swpWithdrawn" class="font-semibold">₹ 0</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas id="swpChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Video Testimonials Section =========== -->
+         <!--
+        <section id="testimonials" class="py-20 md:py-24 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-12 sm:mb-16 reveal">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">What My Clients Say</h2>
+                    <p class="text-base sm:text-lg mt-4 max-w-2xl mx-auto">Real stories from clients who have achieved their financial goals.</p>
+                </div>
+                <div class="relative reveal">
+                    <div class="video-slider-container">
+                        <div class="video-slide" data-index="0"><video poster="https://placehold.co/280x498/333333/FFFFFF?text=Client+1+Reel" muted loop playsinline></video></div>
+                        <div class="video-slide" data-index="1"><video poster="https://placehold.co/280x498/E53935/FFFFFF?text=Client+2+Reel" muted loop playsinline></video></div>
+                        <div class="video-slide" data-index="2"><video poster="https://placehold.co/280x498/555555/FFFFFF?text=Client+3+Reel" muted loop playsinline></video></div>
+                        <div class="video-slide" data-index="3"><video poster="https://placehold.co/280x498/777777/FFFFFF?text=Client+4+Reel" muted loop playsinline></video></div>
+                    </div>
+                    <div class="slider-nav">
+                        <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                        <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+
+        <!-- =========== Text Testimonials Section =========== -->
+        <section class="bg-white py-20 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">What Our Clients Say</h2>
+            <p class="text-lg mt-4 max-w-3xl mx-auto">Real experiences from families who have transformed their financial future with our guidance</p>
+        </div>
+        
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card testimonial-card-1">
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic leading-relaxed">
+                            "Arjun's guidance has been life-changing for our family. His systematic approach to SIP investments helped us build a corpus of ₹25 lakhs in just 5 years. We couldn't have achieved this without his expertise."
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">R</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg" style="color: var(--color-dark);">Rajesh Kumar</h4>
+                            <p class="text-sm text-gray-500">Software Engineer, Kochi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="testimonial-card testimonial-card-2">
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic leading-relaxed">
+                            "As a young professional, I was confused about investment options. Arjun simplified everything and helped me start my investment journey. Now I have a clear roadmap for my financial goals."
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">P</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg" style="color: var(--color-dark);">Priya Nair</h4>
+                            <p class="text-sm text-gray-500">Marketing Manager, Trivandrum</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="testimonial-card testimonial-card-3">
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic leading-relaxed">
+                            "Excellent service and personalized attention. Arjun helped us optimize our portfolio and achieve better returns. His regular follow-ups and market updates are invaluable and it helped me very well."
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">S</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg" style="color: var(--color-dark);">Suresh Menon</h4>
+                            <p class="text-sm text-gray-500">Business Owner, Calicut</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- =========== CTA Section =========== -->
+        <section id="cta" class="py-20 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="relative bg-gray-800 rounded-3xl p-10 md:p-16 overflow-hidden reveal">
+                    <!-- Decorative Graphic -->
+                    <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/3 w-96 h-96 lg:w-[32rem] lg:h-[32rem] pointer-events-none">
+                        <div class="absolute inset-0 bg-red-500/5 rounded-full"></div>
+                        <div class="absolute inset-[15%] bg-red-500/10 rounded-full"></div>
+                        <div class="absolute inset-[30%] bg-red-500/15 rounded-full"></div>
+                        <div class="absolute inset-[45%] bg-red-500/20 rounded-full"></div>
+                    </div>
+                    <!-- Content -->
+                    <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                        <div class="md:col-start-2 text-center md:text-left">
+                             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">Ready to Build Your Wealth?</h2>
+                             <p class="text-base sm:text-lg mt-4 text-gray-300">Take the first step towards your financial goals today. Get started with a personalized plan.</p>
+                             <div class="mt-10">
+                                <a href="start.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full font-bold text-lg text-white transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" style="background: linear-gradient(to right, var(--color-highlight), #ffb74d);">
+                                    Start Now
+                                    <span class="ml-3 bg-white/20 rounded-full p-1.5">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
+                                    </span>
+                                </a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========== Footer =========== -->
+<footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 sm:px-6 py-16">
+        <!-- Main Footer Content -->
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+            <!-- Brand Section -->
+            <div class="md:col-span-2">
+                <h3 class="text-3xl font-bold mb-4 accent-color">Arjun K Raghav</h3>
+                <p class="text-gray-300 mb-6 max-w-md">
+                    Your trusted partner in building generational wealth for Malayali families. Expert financial guidance for a prosperous tomorrow.
+                </p>
+                <!-- AMFI Details -->
+                <div class="bg-gray-800 p-4 rounded-lg mb-6">
+                    <p class="text-sm text-gray-400">
+                        <span class="font-medium">Name:</span> Arjun K | 
+                        <span class="font-medium"> Regn No:</span> ARN-323175 | 
+                        <span class="font-medium">EUIN:</span> E612434
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a></li>
+                    <li><a href="#videos" class="text-gray-300 hover:text-white transition duration-300">Educational Videos</a></li>
+                    <li><a href="#products" class="text-gray-300 hover:text-white transition duration-300">Investment Products</a></li>
+                    <li><a href="#calculators" class="text-gray-300 hover:text-white transition duration-300">Financial Tools</a></li>
+                    <li><a href="#testimonials" class="text-gray-300 hover:text-white transition duration-300">Testimonials</a></li>
+                    <li><a href="start.html" class="text-gray-300 hover:text-white transition duration-300">Start Now</a></li>
+                </ul>
+            </div>
+
+            <!-- Educational Resources -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Learn</h4>
+                <ul class="space-y-3">
+                    <li><a href="mutual.html" class="text-gray-300 hover:text-white transition duration-300">Mutual Funds Guide</a></li>
+                    <li><a href="iap.html" class="text-gray-300 hover:text-white transition duration-300">IAP Education</a></li>
+                    <li><a href="pms.html" class="text-gray-300 hover:text-white transition duration-300">PMS Guide</a></li>
+                    <li><a href="start.html#contact" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Media & Bottom Section -->
+        <div class="border-t border-gray-700 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Social Media Links -->
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="https://www.linkedin.com/in/arjun-k-raghav-a2793a321/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-600 transition duration-300" 
+                       aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/arjun_k_raghav/" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition duration-300" 
+                       aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener" 
+                       class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-400 transition duration-300" 
+                       aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 text-sm mb-2">
+                        Building wealth for <span class="font-semibold text-white">500+ families</span> since 2018
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 Arjun K Raghav. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mt-8 pt-6 border-t border-gray-800">
+            <p class="text-xs text-gray-500 text-center max-w-4xl mx-auto leading-relaxed">
+                <strong>Disclaimer:</strong> Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. This website is for informational purposes only and should not be construed as investment advice.
+            </p>
+        </div>
+    </div>
+
+    <!-- Designer Credit Bottom Bar -->
+    <div class="bg-gray-950 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 py-3">
+            <div class="text-center">
+                <a href="https://wa.me/8592983978" target="_blank" rel="noopener" 
+                   class="text-xs text-gray-500 hover:text-gray-300 hover:underline transition duration-300">
+                    <i class="fas fa-code text-xs mr-1"></i>
+                    Designed by <span class="font-medium">Codeware Studio</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- =========== LinkedIn Notification Pop-up =========== -->
+    <div id="linkedin-popup">
+        <div class="flex-shrink-0">
+            <i class="fab fa-linkedin-in text-3xl text-blue-600 bg-gray-100 p-2 rounded-full"></i>
+        </div>
+        <div class="flex-grow">
+            <p class="font-bold text-sm text-gray-800">Arjun K Raghav posted</p>
+            <p id="popup-text" class="text-sm text-gray-600 mt-1">Check out the latest update...</p>
+        </div>
+        <button id="popup-close-btn" class="close-btn">&times;</button>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
