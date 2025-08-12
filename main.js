@@ -641,47 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Testimonial Cards Sequential Animation ---
-    function initializeTestimonialAnimation() {
-        const testimonialCards = document.querySelectorAll('.testimonial-card');
-        
-        if (testimonialCards.length === 0) {
-            console.log('No testimonial cards found');
-            return;
-        }
-        
-        // Create intersection observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    console.log('Testimonial section is visible, starting animation');
-                    
-                    // Trigger animation for each card
-                    testimonialCards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.classList.add('slide-in');
-                            console.log(`Card ${index + 1} animation triggered`);
-                        }, 100); // Small delay to ensure smooth start
-                    });
-                    
-                    // Stop observing after animation starts
-                    observer.disconnect();
-                }
-            });
-        }, {
-            threshold: 0.2, // Trigger when 20% of section is visible
-            rootMargin: '0px 0px -50px 0px' // Trigger slightly before fully visible
-        });
-        
-        // Find and observe the testimonial section
-        const testimonialSection = document.querySelector('.testimonial-card')?.closest('section');
-        if (testimonialSection) {
-            observer.observe(testimonialSection);
-            console.log('Testimonial observer set up successfully');
-        } else {
-            console.log('Testimonial section not found');
-        }
-    }
+    
 
     // --- Smooth Scrolling for Internal Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

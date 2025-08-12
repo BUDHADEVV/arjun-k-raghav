@@ -514,62 +514,6 @@ input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; background: v
 
 
 
-/* --- Testimonial Card Styles with Working Animation --- */
-.testimonial-card {
-    background-color: #ffffff;
-    border: 2px solid #e9ecef;
-    border-radius: 1.5rem;
-    padding: 2rem;
-    position: relative;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    
-    /* Initial state - hidden and positioned to the right */
-    opacity: 0;
-    transform: translateX(100px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px) translateX(0);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    border-color: var(--color-primary);
-}
-
-.testimonial-card::before {
-    content: '"';
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    font-size: 4rem;
-    color: var(--color-primary);
-    opacity: 0.2;
-    font-family: serif;
-    line-height: 1;
-}
-
-/* Animation states */
-.testimonial-card.slide-in {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Sequential delays for each card */
-.testimonial-card-1.slide-in {
-    transition-delay: 0.2s;
-}
-
-.testimonial-card-2.slide-in {
-    transition-delay: 0.5s;
-}
-
-.testimonial-card-3.slide-in {
-    transition-delay: 0.8s;
-}
-
-/* Ensure hover effect works after animation */
-.testimonial-card.slide-in:hover {
-    transform: translateY(-5px) translateX(0);
-}
 
 
 /* --- Success Popup Styles --- */
