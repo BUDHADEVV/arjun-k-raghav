@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Enhanced Form Validation with Google Sheets Integration ---
     function initializeFormValidation() {
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnBjctmi6nr-fppAfi4xgx9Al7skTiQ_QzWRurrAl57f6aXs7JNglsam41odSoEQ/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwfAH0PFWcCsfLZ9YJu9gwNDYKZEPnx9-R9jXUKkzeWRVlyGk-YJhg-DOJkGxMnXBnObg/exec';
 
         const forms = document.querySelectorAll('form');
         forms.forEach(form => {
@@ -537,6 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const place = form.querySelector('#place')?.value.trim();
                 const age = form.querySelector('#age')?.value;
                 const phone = form.querySelector('#phone')?.value.trim();
+                const investmentAmount = form.querySelector('#investment-amount')?.value.trim() || ''; // NEW FIELD
                 const message = form.querySelector('#message')?.value.trim() || '';
 
                 // Validate required fields
@@ -554,7 +555,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 form.classList.add('form-loading');
                 const submitBtn = form.querySelector('button[type="submit"]');
                 const originalBtnText = submitBtn.innerHTML;
-                submitBtn.innerHTML = 'Sending...';
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
 
                 try {
                     // Determine page source
@@ -578,6 +579,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     formData.append('place', place);
                     formData.append('age', age);
                     formData.append('phone', phone);
+                    formData.append('investmentAmount', investmentAmount); // NEW FIELD ADDED
                     formData.append('message', message);
                     formData.append('pageSource', pageSource);
 
@@ -609,6 +611,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
 
     // --- Success Popup Functions ---
     function showSuccessPopup() {
