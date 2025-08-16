@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Enhanced Form Validation with Google Sheets Integration ---
     function initializeFormValidation() {
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwfAH0PFWcCsfLZ9YJu9gwNDYKZEPnx9-R9jXUKkzeWRVlyGk-YJhg-DOJkGxMnXBnObg/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwY2co5_5bzCUBgRoY0eyhq1VjQZGCV_NwVgttPoUzX9Ks2wJmH74tsfLrq-arBDlk_Mg/exec';
 
         const forms = document.querySelectorAll('form');
         forms.forEach(form => {
