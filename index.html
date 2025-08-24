@@ -292,17 +292,21 @@
         <section id="calculators" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Financial Tools</h2>
-                    <p class="text-base sm:text-lg mt-4 max-w-2xl mx-auto">Empower your decisions with our easy-to-use financial calculators.</p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Financial
+                        Tools</h2>
+                    <p class="text-base sm:text-lg mt-4 max-w-2xl mx-auto">Empower your decisions with our easy-to-use financial
+                        calculators.</p>
                 </div>
-                
-                <div class="flex justify-center flex-nowrap overflow-x-auto -mx-4 sm:-mx-6 px-4 sm:px-6 border-b border-gray-200 mb-10 reveal">
+        
+                <div
+                    class="flex justify-center flex-nowrap overflow-x-auto -mx-4 sm:-mx-6 px-4 sm:px-6 border-b border-gray-200 mb-10 reveal">
                     <button class="calculator-tab active" data-tab="sip">SIP</button>
+                    <button class="calculator-tab" data-tab="lumpsum">Lumpsum</button>
                     <button class="calculator-tab" data-tab="step-up-sip">Step-Up SIP</button>
                     <button class="calculator-tab" data-tab="inflation">Inflation</button>
                     <button class="calculator-tab" data-tab="swp">SWP</button>
                 </div>
-
+        
                 <div class="max-w-6xl mx-auto reveal">
                     <!-- Calculator Panels Wrapper -->
                     <div class="bg-gray-50/50 p-4 sm:p-8 rounded-2xl shadow-inner">
@@ -314,22 +318,32 @@
                                     <div>
                                         <label for="sipAmount" class="font-semibold text-gray-700">Monthly Investment</label>
                                         <div class="slider-input-group mt-2">
-                                            <input id="sipAmountSlider" type="range" min="500" max="100000" step="500" value="5000">
-                                            <div class="value-box"><span class="unit">₹</span><input id="sipAmount" type="number" value="5000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <input id="sipAmountSlider" type="range" min="500" max="100000" step="500"
+                                                value="5000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="sipAmount"
+                                                    type="number" value="5000"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <label for="sipRate" class="font-semibold text-gray-700">Expected Return Rate</label>
                                         <div class="slider-input-group mt-2">
                                             <input id="sipRateSlider" type="range" min="1" max="30" step="0.5" value="12">
-                                            <div class="value-box"><span class="unit">%</span><input id="sipRate" type="number" value="12" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <div class="value-box"><span class="unit">%</span><input id="sipRate" type="number"
+                                                    value="12"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <label for="sipYears" class="font-semibold text-gray-700">Time Period</label>
                                         <div class="slider-input-group mt-2">
                                             <input id="sipYearsSlider" type="range" min="1" max="40" step="1" value="15">
-                                            <div class="value-box"><span class="unit">Yrs</span><input id="sipYears" type="number" value="15" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="sipYears"
+                                                    type="number" value="15"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -337,48 +351,124 @@
                                     <!-- Results -->
                                     <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                                         <p class="text-gray-500">Total Value</p>
-                                        <p id="sipTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 25,22,881</p>
+                                        <p id="sipTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 25,22,881
+                                        </p>
                                         <div class="flex justify-between text-sm mt-4">
-                                            <span>Invested: <span id="sipInvested" class="font-semibold">₹ 9,00,000</span></span>
+                                            <span>Invested: <span id="sipInvested" class="font-semibold">₹
+                                                    9,00,000</span></span>
                                             <span>Returns: <span id="sipReturns" class="font-semibold">₹ 16,22,881</span></span>
                                         </div>
                                     </div>
                                     <!-- Graph -->
-                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas id="sipChart"></canvas></div>
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas
+                                            id="sipChart"></canvas></div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Step-Up SIP Calculator Panel -->
-                        <div id="step-up-sip-panel" class="calculator-panel hidden">
+        
+                        <!-- Lumpsum Calculator Panel -->
+                        <div id="lumpsum-panel" class="calculator-panel hidden">
                             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                                 <div class="lg:col-span-2 space-y-6">
                                     <div>
-                                        <label for="stepUpSipAmount" class="font-semibold text-gray-700">Initial Monthly Investment</label>
+                                        <label for="lumpsumAmount" class="font-semibold text-gray-700">Investment Amount</label>
                                         <div class="slider-input-group mt-2">
-                                            <input id="stepUpSipAmountSlider" type="range" min="500" max="100000" step="500" value="5000">
-                                            <div class="value-box"><span class="unit">₹</span><input id="stepUpSipAmount" type="number" value="5000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <input id="lumpsumAmountSlider" type="range" min="10000" max="5000000" step="10000"
+                                                value="100000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="lumpsumAmount"
+                                                    type="number" value="100000"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <label for="stepUpSipRate" class="font-semibold text-gray-700">Expected Return Rate</label>
+                                        <label for="lumpsumRate" class="font-semibold text-gray-700">Expected Return
+                                            Rate</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="lumpsumRateSlider" type="range" min="1" max="30" step="0.5" value="12">
+                                            <div class="value-box"><span class="unit">%</span><input id="lumpsumRate"
+                                                    type="number" value="12"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="lumpsumYears" class="font-semibold text-gray-700">Time Period</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="lumpsumYearsSlider" type="range" min="1" max="40" step="1" value="10">
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="lumpsumYears"
+                                                    type="number" value="10"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-3 flex flex-col">
+                                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                                        <p class="text-gray-500">Maturity Value</p>
+                                        <p id="lumpsumTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 3,10,585
+                                        </p>
+                                        <div class="flex justify-between text-sm mt-4">
+                                            <span>Invested: <span id="lumpsumInvested" class="font-semibold">₹
+                                                    1,00,000</span></span>
+                                            <span>Returns: <span id="lumpsumReturns" class="font-semibold">₹
+                                                    2,10,585</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas
+                                            id="lumpsumChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Step-Up SIP Calculator Panel -->
+                        <div id="step-up-sip-panel" class="calculator-panel hidden">
+                            <!-- Your existing Step-Up SIP content -->
+                            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                                <div class="lg:col-span-2 space-y-6">
+                                    <div>
+                                        <label for="stepUpSipAmount" class="font-semibold text-gray-700">Initial Monthly
+                                            Investment</label>
+                                        <div class="slider-input-group mt-2">
+                                            <input id="stepUpSipAmountSlider" type="range" min="500" max="100000" step="500"
+                                                value="5000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="stepUpSipAmount"
+                                                    type="number" value="5000"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="stepUpSipRate" class="font-semibold text-gray-700">Expected Return
+                                            Rate</label>
                                         <div class="slider-input-group mt-2">
                                             <input id="stepUpSipRateSlider" type="range" min="1" max="30" step="0.5" value="12">
-                                            <div class="value-box"><span class="unit">%</span><input id="stepUpSipRate" type="number" value="12" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <div class="value-box"><span class="unit">%</span><input id="stepUpSipRate"
+                                                    type="number" value="12"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <label for="stepUpSipYears" class="font-semibold text-gray-700">Time Period</label>
                                         <div class="slider-input-group mt-2">
                                             <input id="stepUpSipYearsSlider" type="range" min="1" max="40" step="1" value="15">
-                                            <div class="value-box"><span class="unit">Yrs</span><input id="stepUpSipYears" type="number" value="15" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="stepUpSipYears"
+                                                    type="number" value="15"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <label for="stepUpSipIncrement" class="font-semibold text-gray-700">Annual Step-Up</label>
+                                        <label for="stepUpSipIncrement" class="font-semibold text-gray-700">Annual
+                                            Step-Up</label>
                                         <div class="slider-input-group mt-2">
-                                            <input id="stepUpSipIncrementSlider" type="range" min="0" max="25" step="1" value="10">
-                                            <div class="value-box"><span class="unit">%</span><input id="stepUpSipIncrement" type="number" value="10" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <input id="stepUpSipIncrementSlider" type="range" min="0" max="25" step="1"
+                                                value="10">
+                                            <div class="value-box"><span class="unit">%</span><input id="stepUpSipIncrement"
+                                                    type="number" value="10"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -391,80 +481,111 @@
                                             <span>Returns: <span id="stepUpSipReturns" class="font-semibold">₹ 0</span></span>
                                         </div>
                                     </div>
-                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas id="stepUpSipChart"></canvas></div>
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas
+                                            id="stepUpSipChart"></canvas></div>
                                 </div>
                             </div>
                         </div>
-                        
+        
                         <!-- Inflation Calculator Panel -->
                         <div id="inflation-panel" class="calculator-panel hidden">
+                            <!-- Your existing Inflation content -->
                             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                                 <div class="lg:col-span-2 space-y-6">
                                     <div>
                                         <label for="inflationCost" class="font-semibold text-gray-700">Today's Cost</label>
                                         <div class="slider-input-group mt-2">
-                                            <input id="inflationCostSlider" type="range" min="1000" max="1000000" step="1000" value="100000">
-                                            <div class="value-box"><span class="unit">₹</span><input id="inflationCost" type="number" value="100000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <input id="inflationCostSlider" type="range" min="1000" max="1000000" step="1000"
+                                                value="100000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="inflationCost"
+                                                    type="number" value="100000"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <label for="inflationRate" class="font-semibold text-gray-700">Inflation Rate</label>
                                         <div class="slider-input-group mt-2">
                                             <input id="inflationRateSlider" type="range" min="1" max="20" step="0.5" value="6">
-                                            <div class="value-box"><span class="unit">%</span><input id="inflationRate" type="number" value="6" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <div class="value-box"><span class="unit">%</span><input id="inflationRate"
+                                                    type="number" value="6"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <label for="inflationYears" class="font-semibold text-gray-700">Time Period</label>
                                         <div class="slider-input-group mt-2">
                                             <input id="inflationYearsSlider" type="range" min="1" max="40" step="1" value="10">
-                                            <div class="value-box"><span class="unit">Yrs</span><input id="inflationYears" type="number" value="10" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="inflationYears"
+                                                    type="number" value="10"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="lg:col-span-3 flex flex-col">
                                     <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                                         <p class="text-gray-500">Future Cost</p>
-                                        <p id="inflationTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 1,79,085</p>
+                                        <p id="inflationTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹
+                                            1,79,085</p>
                                         <div class="flex justify-center text-sm mt-4">
-                                            <span>Today's Cost: <span id="inflationStartValue" class="font-semibold">₹ 1,00,000</span></span>
+                                            <span>Today's Cost: <span id="inflationStartValue" class="font-semibold">₹
+                                                    1,00,000</span></span>
                                         </div>
                                     </div>
-                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas id="inflationChart"></canvas></div>
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas
+                                            id="inflationChart"></canvas></div>
                                 </div>
                             </div>
                         </div>
-
+        
                         <!-- SWP Calculator Panel -->
                         <div id="swp-panel" class="calculator-panel hidden">
+                            <!-- Your existing SWP content -->
                             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                                 <div class="lg:col-span-2 space-y-6">
                                     <div>
                                         <label for="swpInvestment" class="font-semibold text-gray-700">Total Investment</label>
                                         <div class="slider-input-group mt-2">
-                                            <input id="swpInvestmentSlider" type="range" min="100000" max="5000000" step="10000" value="1000000">
-                                            <div class="value-box"><span class="unit">₹</span><input id="swpInvestment" type="number" value="1000000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <input id="swpInvestmentSlider" type="range" min="100000" max="5000000" step="10000"
+                                                value="1000000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="swpInvestment"
+                                                    type="number" value="1000000"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <label for="swpWithdrawal" class="font-semibold text-gray-700">Withdrawal per month</label>
+                                        <label for="swpWithdrawal" class="font-semibold text-gray-700">Withdrawal per
+                                            month</label>
                                         <div class="slider-input-group mt-2">
-                                            <input id="swpWithdrawalSlider" type="range" min="1000" max="100000" step="1000" value="8000">
-                                            <div class="value-box"><span class="unit">₹</span><input id="swpWithdrawal" type="number" value="8000" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <input id="swpWithdrawalSlider" type="range" min="1000" max="100000" step="1000"
+                                                value="8000">
+                                            <div class="value-box"><span class="unit">₹</span><input id="swpWithdrawal"
+                                                    type="number" value="8000"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <label for="swpRate" class="font-semibold text-gray-700">Expected Return Rate</label>
                                         <div class="slider-input-group mt-2">
                                             <input id="swpRateSlider" type="range" min="1" max="20" step="0.5" value="8">
-                                            <div class="value-box"><span class="unit">%</span><input id="swpRate" type="number" value="8" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <div class="value-box"><span class="unit">%</span><input id="swpRate" type="number"
+                                                    value="8"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                     <div>
                                         <label for="swpYears" class="font-semibold text-gray-700">Time Period</label>
                                         <div class="slider-input-group mt-2">
                                             <input id="swpYearsSlider" type="range" min="1" max="40" step="1" value="10">
-                                            <div class="value-box"><span class="unit">Yrs</span><input id="swpYears" type="number" value="10" class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color"></div>
+                                            <div class="value-box"><span class="unit">Yrs</span><input id="swpYears"
+                                                    type="number" value="10"
+                                                    class="p-3 rounded-lg border border-gray-300 focus:outline-none ring-accent-color">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -473,10 +594,12 @@
                                         <p class="text-gray-500">Final Portfolio Value</p>
                                         <p id="swpTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 0</p>
                                         <div class="flex justify-center text-sm mt-4">
-                                            <span>Total Withdrawn: <span id="swpWithdrawn" class="font-semibold">₹ 0</span></span>
+                                            <span>Total Withdrawn: <span id="swpWithdrawn" class="font-semibold">₹
+                                                    0</span></span>
                                         </div>
                                     </div>
-                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas id="swpChart"></canvas></div>
+                                    <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas
+                                            id="swpChart"></canvas></div>
                                 </div>
                             </div>
                         </div>
@@ -484,6 +607,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- =========== Video Testimonials Section =========== -->
          <!--

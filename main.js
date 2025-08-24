@@ -469,6 +469,75 @@ document.addEventListener('DOMContentLoaded', () => {
         calculateAndDisplaySwp();
     }
 
+    // --- Lumpsum Calculator ---
+    function initializeLumpsumCalculator() {
+        const lumpsumAmountEl = document.getElementById('lumpsumAmount');
+        const lumpsumRateEl = document.getElementById('lumpsumRate');
+        const lumpsumYearsEl = document.getElementById('lumpsumYears');
+        const lumpsumInvestedEl = document.getElementById('lumpsumInvested');
+        const lumpsumReturnsEl = document.getElementById('lumpsumReturns');
+        const lumpsumTotalEl = document.getElementById('lumpsumTotal');
+        const lumpsumChartCanvas = document.getElementById('lumpsumChart');
+
+        if (!lumpsumAmountEl || !lumpsumRateEl || !lumpsumYearsEl) return;
+
+        let lumpsumChart;
+
+        function calculateAndDisplayLumpsum() {
+            const P = parseFloat(lumpsumAmountEl.value) || 0;
+            const r = parseFloat(lumpsumRateEl.value) / 100;
+            const t = parseInt(lumpsumYearsEl.value) || 0;
+
+            if (P <= 0 || r < 0 || t <= 0) return;
+
+            // Lumpsum formula: Final Value = P × (1 + r)^t
+            const finalValue = P * Math.pow(1 + r, t);
+            const totalReturns = finalValue - P;
+
+            const labels = [];
+            const data = [];
+
+            for (let year = 1; year <= t; year++) {
+                const yearlyValue = P * Math.pow(1 + r, year);
+                labels.push(currentYear + year);
+                data.push(yearlyValue.toFixed(0));
+            }
+
+            if (lumpsumInvestedEl) lumpsumInvestedEl.textContent = formatCurrency(P);
+            if (lumpsumReturnsEl) lumpsumReturnsEl.textContent = formatCurrency(totalReturns);
+            if (lumpsumTotalEl) lumpsumTotalEl.textContent = formatCurrency(finalValue);
+
+            if (lumpsumChartCanvas && typeof Chart !== 'undefined') {
+                const ctx = lumpsumChartCanvas.getContext('2d');
+                lumpsumChart = createChart(ctx, lumpsumChart, {
+                    type: 'line',
+                    data: {
+                        labels,
+                        datasets: [{
+                            label: 'Investment Value',
+                            data,
+                            backgroundColor: 'rgba(229, 57, 53, 0.1)',
+                            borderColor: '#E53935',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#E53935',
+                            pointRadius: 4,
+                            pointHoverRadius: 6
+                        }]
+                    },
+                    options: chartDefaultOptions
+                });
+            }
+        }
+
+        setupSliderSync('lumpsumAmountSlider', 'lumpsumAmount', calculateAndDisplayLumpsum);
+        setupSliderSync('lumpsumRateSlider', 'lumpsumRate', calculateAndDisplayLumpsum);
+        setupSliderSync('lumpsumYearsSlider', 'lumpsumYears', calculateAndDisplayLumpsum);
+        calculateAndDisplayLumpsum();
+    }
+
+
     /* ===== VIDEO TESTIMONIAL SLIDER - TEMPORARILY DISABLED =====
     function initializeVideoSlider() {
         // Video slider code commented out
@@ -663,6 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
     initializeSipCalculator();
     initializeStepUpSipCalculator();
+    initializeLumpsumCalculator(); // ADD THIS LINE
     initializeInflationCalculator();
     initializeSwpCalculator();
     // initializeVideoSlider(); // Commented out
