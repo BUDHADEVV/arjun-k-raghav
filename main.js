@@ -3,6 +3,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const currentYear = new Date().getFullYear();
 
+    // Wait for Chart.js to load before initializing calculators
+    function waitForChartJS(callback) {
+        if (typeof Chart !== 'undefined') {
+            callback();
+        } else {
+            console.log('Waiting for Chart.js to load...');
+            setTimeout(() => waitForChartJS(callback), 100);
+        }
+    }
+
     // --- Scroll Animations ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -18,12 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (mobileMenuButton && mobileMenu) {
-        // Toggle menu when clicking the hamburger button
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close menu when clicking menu items
         const menuLinks = mobileMenu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -31,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (event) => {
             const isClickInsideMenu = mobileMenu.contains(event.target);
             const isClickOnButton = mobileMenuButton.contains(event.target);
@@ -41,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when pressing Escape key
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
@@ -72,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
             const targetContent = document.getElementById(toggle.getAttribute('aria-controls'));
 
-            // Close all other accordions
             accordionToggles.forEach(otherToggle => {
                 if (otherToggle !== toggle) {
                     const otherContent = document.getElementById(otherToggle.getAttribute('aria-controls'));
@@ -84,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Toggle current accordion
             if (isExpanded) {
                 if (targetContent) {
                     targetContent.classList.add('hidden');
@@ -101,12 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Make entire accordion header clickable
     document.querySelectorAll('.accordion-header').forEach(header => {
         header.addEventListener('click', (e) => {
-            // Prevent double-firing if button is clicked directly
             if (e.target.closest('.accordion-toggle')) return;
-
             const toggle = header.querySelector('.accordion-toggle');
             if (toggle) toggle.click();
         });
@@ -242,6 +243,83 @@ document.addEventListener('DOMContentLoaded', () => {
         calculateAndDisplaySip();
     }
 
+    // --- Lumpsum Calculator (FIXED) ---
+    function initializeLumpsumCalculator() {
+        const lumpsumAmountEl = document.getElementById('lumpsumAmount');
+        const lumpsumRateEl = document.getElementById('lumpsumRate');
+        const lumpsumYearsEl = document.getElementById('lumpsumYears');
+        const lumpsumInvestedEl = document.getElementById('lumpsumInvested');
+        const lumpsumReturnsEl = document.getElementById('lumpsumReturns');
+        const lumpsumTotalEl = document.getElementById('lumpsumTotal');
+        const lumpsumChartCanvas = document.getElementById('lumpsumChart');
+
+        if (!lumpsumAmountEl || !lumpsumRateEl || !lumpsumYearsEl) return;
+
+        let lumpsumChart;
+
+        function calculateAndDisplayLumpsum() {
+            const P = parseFloat(lumpsumAmountEl.value) || 0;
+            const r = parseFloat(lumpsumRateEl.value) / 100;
+            const t = parseInt(lumpsumYearsEl.value) || 0;
+
+            if (P <= 0 || r < 0 || t <= 0) return;
+
+            // Lumpsum formula: Final Value = P × (1 + r)^t
+            const finalValue = P * Math.pow(1 + r, t);
+            const totalReturns = finalValue - P;
+
+            const labels = [];
+            const data = [];
+
+            for (let year = 1; year <= t; year++) {
+                const yearlyValue = P * Math.pow(1 + r, year);
+                labels.push(currentYear + year);
+                data.push(yearlyValue.toFixed(0));
+            }
+
+            // Update text values
+            if (lumpsumInvestedEl) lumpsumInvestedEl.textContent = formatCurrency(P);
+            if (lumpsumReturnsEl) lumpsumReturnsEl.textContent = formatCurrency(totalReturns);
+            if (lumpsumTotalEl) lumpsumTotalEl.textContent = formatCurrency(finalValue);
+
+            // Enhanced Chart Creation with Loading Check
+            if (lumpsumChartCanvas) {
+                if (typeof Chart !== 'undefined') {
+                    const ctx = lumpsumChartCanvas.getContext('2d');
+                    lumpsumChart = createChart(ctx, lumpsumChart, {
+                        type: 'line',
+                        data: {
+                            labels,
+                            datasets: [{
+                                label: 'Investment Value',
+                                data,
+                                backgroundColor: 'rgba(229, 57, 53, 0.1)',
+                                borderColor: '#E53935',
+                                borderWidth: 3,
+                                fill: true,
+                                tension: 0.4,
+                                pointBackgroundColor: '#E53935',
+                                pointRadius: 4,
+                                pointHoverRadius: 6
+                            }]
+                        },
+                        options: chartDefaultOptions
+                    });
+                } else {
+                    console.log('Chart.js not loaded yet for lumpsum, retrying...');
+                    setTimeout(calculateAndDisplayLumpsum, 500);
+                }
+            }
+        }
+
+        setupSliderSync('lumpsumAmountSlider', 'lumpsumAmount', calculateAndDisplayLumpsum);
+        setupSliderSync('lumpsumRateSlider', 'lumpsumRate', calculateAndDisplayLumpsum);
+        setupSliderSync('lumpsumYearsSlider', 'lumpsumYears', calculateAndDisplayLumpsum);
+        
+        // Initial calculation with delay to ensure Chart.js is loaded
+        setTimeout(calculateAndDisplayLumpsum, 100);
+    }
+
     // --- Step-Up SIP Calculator ---
     function initializeStepUpSipCalculator() {
         const stepUpSipAmountEl = document.getElementById('stepUpSipAmount');
@@ -273,17 +351,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = [];
             
             for (let year = 1; year <= t; year++) {
-                // Calculate for current year
                 const yearlyInvestment = currentSip * 12;  
                 totalInvested += yearlyInvestment;
                 
-                // Future value calculation for step-up SIP
                 futureValue += currentSip * ((Math.pow(1 + monthlyRate, 12) - 1) / monthlyRate) * Math.pow(1 + monthlyRate, (t - year) * 12);
                 
                 labels.push(currentYear + year);
                 data.push(futureValue.toFixed(0));
                 
-                // Increase SIP amount for next year
                 currentSip = currentSip * (1 + increment);
             }
             
@@ -418,12 +493,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             for (let year = 1; year <= years; year++) {
                 for (let month = 1; month <= 12; month++) {
-                    // Apply monthly growth
                     remainingAmount = remainingAmount * (1 + monthlyReturn);
-                    // Subtract monthly withdrawal
                     remainingAmount -= monthlyWithdrawal;
                     
-                    // If amount goes negative, set to 0
                     if (remainingAmount < 0) {
                         remainingAmount = 0;
                     }
@@ -468,81 +540,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setupSliderSync('swpYearsSlider', 'swpYears', calculateAndDisplaySwp);
         calculateAndDisplaySwp();
     }
-
-    // --- Lumpsum Calculator ---
-    function initializeLumpsumCalculator() {
-        const lumpsumAmountEl = document.getElementById('lumpsumAmount');
-        const lumpsumRateEl = document.getElementById('lumpsumRate');
-        const lumpsumYearsEl = document.getElementById('lumpsumYears');
-        const lumpsumInvestedEl = document.getElementById('lumpsumInvested');
-        const lumpsumReturnsEl = document.getElementById('lumpsumReturns');
-        const lumpsumTotalEl = document.getElementById('lumpsumTotal');
-        const lumpsumChartCanvas = document.getElementById('lumpsumChart');
-
-        if (!lumpsumAmountEl || !lumpsumRateEl || !lumpsumYearsEl) return;
-
-        let lumpsumChart;
-
-        function calculateAndDisplayLumpsum() {
-            const P = parseFloat(lumpsumAmountEl.value) || 0;
-            const r = parseFloat(lumpsumRateEl.value) / 100;
-            const t = parseInt(lumpsumYearsEl.value) || 0;
-
-            if (P <= 0 || r < 0 || t <= 0) return;
-
-            // Lumpsum formula: Final Value = P × (1 + r)^t
-            const finalValue = P * Math.pow(1 + r, t);
-            const totalReturns = finalValue - P;
-
-            const labels = [];
-            const data = [];
-
-            for (let year = 1; year <= t; year++) {
-                const yearlyValue = P * Math.pow(1 + r, year);
-                labels.push(currentYear + year);
-                data.push(yearlyValue.toFixed(0));
-            }
-
-            if (lumpsumInvestedEl) lumpsumInvestedEl.textContent = formatCurrency(P);
-            if (lumpsumReturnsEl) lumpsumReturnsEl.textContent = formatCurrency(totalReturns);
-            if (lumpsumTotalEl) lumpsumTotalEl.textContent = formatCurrency(finalValue);
-
-            if (lumpsumChartCanvas && typeof Chart !== 'undefined') {
-                const ctx = lumpsumChartCanvas.getContext('2d');
-                lumpsumChart = createChart(ctx, lumpsumChart, {
-                    type: 'line',
-                    data: {
-                        labels,
-                        datasets: [{
-                            label: 'Investment Value',
-                            data,
-                            backgroundColor: 'rgba(229, 57, 53, 0.1)',
-                            borderColor: '#E53935',
-                            borderWidth: 3,
-                            fill: true,
-                            tension: 0.4,
-                            pointBackgroundColor: '#E53935',
-                            pointRadius: 4,
-                            pointHoverRadius: 6
-                        }]
-                    },
-                    options: chartDefaultOptions
-                });
-            }
-        }
-
-        setupSliderSync('lumpsumAmountSlider', 'lumpsumAmount', calculateAndDisplayLumpsum);
-        setupSliderSync('lumpsumRateSlider', 'lumpsumRate', calculateAndDisplayLumpsum);
-        setupSliderSync('lumpsumYearsSlider', 'lumpsumYears', calculateAndDisplayLumpsum);
-        calculateAndDisplayLumpsum();
-    }
-
-
-    /* ===== VIDEO TESTIMONIAL SLIDER - TEMPORARILY DISABLED =====
-    function initializeVideoSlider() {
-        // Video slider code commented out
-    }
-    ===== END VIDEO TESTIMONIAL SLIDER ===== */
 
     // --- LinkedIn Pop-up Logic ---
     function initializeLinkedInPopup() {
@@ -601,15 +598,13 @@ document.addEventListener('DOMContentLoaded', () => {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                // Get form fields
                 const name = form.querySelector('#name')?.value.trim();
                 const place = form.querySelector('#place')?.value.trim();
                 const age = form.querySelector('#age')?.value;
                 const phone = form.querySelector('#phone')?.value.trim();
-                const investmentAmount = form.querySelector('#investment-amount')?.value.trim() || ''; // NEW FIELD
+                const investmentAmount = form.querySelector('#investment-amount')?.value.trim() || '';
                 const message = form.querySelector('#message')?.value.trim() || '';
 
-                // Validate required fields
                 if (!name || !place || !age || !phone) {
                     alert('Please fill in all required fields.');
                     return;
@@ -620,14 +615,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                // Show loading state
                 form.classList.add('form-loading');
                 const submitBtn = form.querySelector('button[type="submit"]');
                 const originalBtnText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
 
                 try {
-                    // Determine page source
                     let pageSource = 'Unknown';
                     const path = window.location.pathname;
                     if (path.includes('index.html') || path === '/') {
@@ -642,17 +635,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         pageSource = 'Start Investment Page';
                     }
 
-                    // Prepare form data
                     const formData = new FormData();
                     formData.append('name', name);
                     formData.append('place', place);
                     formData.append('age', age);
                     formData.append('phone', phone);
-                    formData.append('investmentAmount', investmentAmount); // NEW FIELD ADDED
+                    formData.append('investmentAmount', investmentAmount);
                     formData.append('message', message);
                     formData.append('pageSource', pageSource);
 
-                    // Submit to Google Sheets
                     const response = await fetch(SCRIPT_URL, {
                         method: 'POST',
                         body: formData
@@ -661,9 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const result = await response.json();
 
                     if (result.result === 'success') {
-                        // Show success popup
                         showSuccessPopup();
-                        // Reset form
                         form.reset();
                     } else {
                         throw new Error(result.message || 'Submission failed');
@@ -673,14 +662,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.error('Error:', error);
                     alert('Sorry, there was an error submitting your form. Please try again.');
                 } finally {
-                    // Remove loading state
                     form.classList.remove('form-loading');
                     submitBtn.innerHTML = originalBtnText;
                 }
             });
         });
     }
-
 
     // --- Success Popup Functions ---
     function showSuccessPopup() {
@@ -713,7 +700,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    
+    // --- Testimonial Animation (if exists) ---
+    function initializeTestimonialAnimation() {
+        // Add your testimonial animation code here if needed
+    }
 
     // --- Smooth Scrolling for Internal Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -729,13 +719,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize all components
-    initializeSipCalculator();
-    initializeStepUpSipCalculator();
-    initializeLumpsumCalculator(); // ADD THIS LINE
-    initializeInflationCalculator();
-    initializeSwpCalculator();
-    // initializeVideoSlider(); // Commented out
+    // --- Initialize Components with Chart.js Loading Check ---
+    waitForChartJS(() => {
+        console.log('Chart.js loaded, initializing calculators...');
+        initializeSipCalculator();
+        initializeLumpsumCalculator();
+        initializeStepUpSipCalculator();
+        initializeInflationCalculator();
+        initializeSwpCalculator();
+    });
+
+    // Initialize non-chart components immediately
     initializeLinkedInPopup();
     initializeFormValidation();
     initializeTestimonialAnimation();
