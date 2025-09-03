@@ -1,5 +1,7 @@
 // Combined JavaScript for Arjun K Raghav Investment Portfolio Website
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const currentYear = new Date().getFullYear();
 
@@ -589,85 +591,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     }
 
-    // --- Enhanced Form Validation with Google Sheets Integration ---
-    function initializeFormValidation() {
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwY2co5_5bzCUBgRoY0eyhq1VjQZGCV_NwVgttPoUzX9Ks2wJmH74tsfLrq-arBDlk_Mg/exec';
+    
 
-        const forms = document.querySelectorAll('form');
-        forms.forEach(form => {
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-
-                const name = form.querySelector('#name')?.value.trim();
-                const place = form.querySelector('#place')?.value.trim();
-                const age = form.querySelector('#age')?.value;
-                const phone = form.querySelector('#phone')?.value.trim();
-                const investmentAmount = form.querySelector('#investment-amount')?.value.trim() || '';
-                const message = form.querySelector('#message')?.value.trim() || '';
-
-                if (!name || !place || !age || !phone) {
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-
-                if (age < 18 || age > 100) {
-                    alert('Please enter a valid age between 18 and 100.');
-                    return;
-                }
-
-                form.classList.add('form-loading');
-                const submitBtn = form.querySelector('button[type="submit"]');
-                const originalBtnText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-
-                try {
-                    let pageSource = 'Unknown';
-                    const path = window.location.pathname;
-                    if (path.includes('index.html') || path === '/') {
-                        pageSource = 'Home Page';
-                    } else if (path.includes('mutual.html')) {
-                        pageSource = 'Mutual Funds Page';
-                    } else if (path.includes('iap.html')) {
-                        pageSource = 'IAP Page';
-                    } else if (path.includes('pms.html')) {
-                        pageSource = 'PMS Page';
-                    } else if (path.includes('start.html')) {
-                        pageSource = 'Start Investment Page';
-                    }
-
-                    const formData = new FormData();
-                    formData.append('name', name);
-                    formData.append('place', place);
-                    formData.append('age', age);
-                    formData.append('phone', phone);
-                    formData.append('investmentAmount', investmentAmount);
-                    formData.append('message', message);
-                    formData.append('pageSource', pageSource);
-
-                    const response = await fetch(SCRIPT_URL, {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    const result = await response.json();
-
-                    if (result.result === 'success') {
-                        showSuccessPopup();
-                        form.reset();
-                    } else {
-                        throw new Error(result.message || 'Submission failed');
-                    }
-
-                } catch (error) {
-                    console.error('Error:', error);
-                    alert('Sorry, there was an error submitting your form. Please try again.');
-                } finally {
-                    form.classList.remove('form-loading');
-                    submitBtn.innerHTML = originalBtnText;
-                }
+    // --- Calendly Integration Functions ---
+    function openCalendlyPopup() {
+        if (typeof Calendly !== 'undefined') {
+            Calendly.initPopupWidget({
+                url: 'https://calendly.com/arjunkdm0/30min'
             });
+        } else {
+            // Fallback: open in new tab if Calendly widget fails to load
+            window.open('https://calendly.com/arjunkdm0/30min', '_blank');
+        }
+        return false;
+    }
+
+    // --- Floating Button Functionality ---
+    function initializeFloatingButton() {
+        const floatingBtn = document.getElementById('floating-consultation');
+        if (!floatingBtn) return;
+
+        // Initially hide the floating button
+        floatingBtn.style.display = 'none';
+
+        // Show/hide floating button based on scroll
+        let isVisible = false;
+        window.addEventListener('scroll', function () {
+            const shouldShow = window.scrollY > 300;
+
+            if (shouldShow && !isVisible) {
+                floatingBtn.style.display = 'block';
+                isVisible = true;
+            } else if (!shouldShow && isVisible) {
+                floatingBtn.style.display = 'none';
+                isVisible = false;
+            }
+        });
+
+        // Add click tracking for analytics (optional)
+        floatingBtn.addEventListener('click', function () {
+            // You can add analytics tracking here if needed
+            console.log('Floating consultation button clicked');
         });
     }
+
+    // Make openCalendlyPopup globally accessible
+    window.openCalendlyPopup = openCalendlyPopup;
+
 
     // --- Success Popup Functions ---
     function showSuccessPopup() {
@@ -731,18 +701,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize non-chart components immediately
     initializeLinkedInPopup();
-    initializeFormValidation();
-    initializeTestimonialAnimation();
+    
+    //initializeTestimonialAnimation();
+    initializeFloatingButton(); // Add this line
+
 
 }); // Main DOMContentLoaded closing brace
 
-// Global function for popup (needed for onclick in HTML)
-function closeSuccessPopup() {
-    const overlay = document.getElementById('successOverlay');
-    const popup = document.getElementById('successPopup');
-    
-    if (overlay && popup) {
-        overlay.classList.remove('show');
-        popup.classList.remove('show');
-    }
-}
+

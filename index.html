@@ -21,6 +21,17 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
+
+
+    
+    
+    <!-- Calendly Widget CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    
+    <!-- Calendly Widget JavaScript -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+
 </head>
 <body class="antialiased">
     <!-- =========== Header =========== -->
@@ -33,7 +44,7 @@
                 <a href="#products" class="text-gray-600 hover:accent-color font-medium transition duration-300">Products</a>
                 <a href="#calculators" class="text-gray-600 hover:accent-color font-medium transition duration-300">Calculators</a>
                 <a href="#testimonials" class="text-gray-600 hover:accent-color font-medium transition duration-300">Testimonials</a>
-                <a href="start.html#contact" class="text-gray-600 hover:accent-color font-medium transition duration-300">Appointment</a>
+                <button onclick="openCalendlyPopup()" class="text-gray-600 hover:accent-color font-medium transition duration-300 bg-transparent border-none cursor-pointer">Appointment</button>
                 <a href="start.html" class="bg-accent-color text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 shadow-md hover:shadow-lg">Start Now</a>
             </div>
             <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-600 focus:outline-none"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
@@ -44,7 +55,7 @@
             <a href="#products" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Products</a>
             <a href="#calculators" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Calculators</a>
             <a href="#testimonials" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Testimonials</a>
-            <a href="start.html#contact" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Appointment</a>
+            <button onclick="openCalendlyPopup()" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100 w-full text-left bg-transparent border-none">Appointment</button>
             <a href="start.html" class="block py-4 px-6 text-sm bg-accent-color text-white text-center rounded-b-lg">Start Now</a>
         </div>
     </header>
@@ -61,8 +72,12 @@
                         Your trusted partner in securing the financial future of families across Kerala. Expert guidance for a prosperous tomorrow.
                     </p>
                     <div class="mt-10">
-                         <a href="#products" class="bg-accent-color text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-opacity-90 transition duration-300 inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Explore Investment Solutions</a>
+                        <button onclick="openCalendlyPopup()"
+                            class="bg-accent-color text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-base sm:text-lg hover:bg-opacity-90 transition duration-300 inline-block shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 border-none cursor-pointer">
+                            <i class="fas fa-calendar-check mr-2"></i>Book Free Consultation
+                        </button>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -232,6 +247,8 @@
 </section>
 <!-- Simple HR Line -->
 <hr class="container mx-auto max-w-4xl border-t border-gray-300 my-12">
+
+        
 
 
 
@@ -637,7 +654,7 @@
         
 
         <!-- =========== CTA Section =========== -->
-        <section id="cta" class="py-20 md:py-24">
+        <section id="contact" class="py-20 md:py-24">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="relative bg-gray-800 rounded-3xl p-10 md:p-16 overflow-hidden reveal">
                     <!-- Decorative Graphic -->
@@ -770,6 +787,8 @@
     </div>
 </footer>
 
+
+
     <!-- =========== LinkedIn Notification Pop-up =========== -->
     <div id="linkedin-popup">
         <div class="flex-shrink-0">
@@ -781,6 +800,18 @@
         </div>
         <button id="popup-close-btn" class="close-btn">&times;</button>
     </div>
+
+    <!-- Small circular floating button -->
+<div id="float-consult" class="cal-float">
+  <button type="button" class="cal-float-btn" onclick="openCalendlyPopup()" aria-label="Book consultation">
+    <i class="fas fa-calendar-check"></i>
+  </button>
+</div>
+
+
+<!-- Your existing JavaScript -->
+<script src="main.js"></script>
+
     
     <!-- JavaScript -->
     <script src="main.js"></script>

@@ -613,3 +613,139 @@ input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; background: v
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+
+
+/* Consultation Button Styles */
+.consultation-btn {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #D32F2F 100%);
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(183, 28, 28, 0.3);
+    display: inline-flex;
+    align-items: center;
+}
+
+.consultation-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(183, 28, 28, 0.4);
+    background: linear-gradient(135deg, #A31818 0%, #B71C1C 100%);
+}
+
+/* Floating Consultation Button */
+.floating-consultation-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50;
+    animation: floatPulse 2s infinite ease-in-out;
+}
+
+.floating-btn {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #D32F2F 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 8px 25px rgba(183, 28, 28, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+}
+
+.floating-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(183, 28, 28, 0.5);
+    background: linear-gradient(135deg, #A31818 0%, #B71C1C 100%);
+}
+
+.floating-btn i {
+    font-size: 1.1rem;
+}
+
+/* Floating button animations */
+@keyframes floatPulse {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .floating-consultation-btn {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .floating-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .floating-btn-text {
+        display: none;
+    }
+    
+    .floating-btn {
+        border-radius: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0;
+        justify-content: center;
+    }
+}
+
+
+/* Small circular Calendly floating button */
+.cal-float {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60; /* above linkedin popup (z-index 50) */
+}
+
+.cal-float-btn {
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #D32F2F 100%);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(183, 28, 28, 0.35);
+  cursor: pointer;
+  display: inline-grid;
+  place-items: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.cal-float-btn i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.cal-float-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(183, 28, 28, 0.45);
+  background: linear-gradient(135deg, #A31818 0%, #B71C1C 100%);
+}
+
+/* Smaller footprint on compact screens */
+@media (max-width: 640px) {
+  .cal-float { right: 12px; bottom: 12px; }
+  .cal-float-btn { width: 46px; height: 46px; }
+  .cal-float-btn i { font-size: 16px; }
+}

@@ -18,6 +18,9 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body class="antialiased">
     <!-- =========== Header =========== -->
@@ -196,142 +199,30 @@
             </div>
         </section>
 
-        <!-- =========== Contact Section =========== -->
-        <section id="contact" class="bg-white py-20 md:py-24">
+        <!-- =========== CTA Section =========== -->
+        <section id="contact" class="py-20 md:py-24">
             <div class="container mx-auto px-4 sm:px-6">
-                <div class="text-center mb-16 reveal">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Contact for
-                        Investment Guidance</h2>
-                    <p class="text-lg mt-4 max-w-3xl mx-auto">Get personalized investment advice and support to start your
-                        wealth creation journey</p>
-                </div>
-        
-                <div class="max-w-4xl mx-auto">
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <!-- Contact Form -->
-                        <div class="reveal">
-                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Get Started Today</h3>
-                            <form class="space-y-6" action="#" method="POST">
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name
-                                            *</label>
-                                        <input type="text" id="name" name="name" required class="form-input"
-                                            placeholder="Your full name">
-                                    </div>
-                                    <div>
-                                        <label for="place" class="block text-sm font-semibold text-gray-700 mb-2">City *</label>
-                                        <input type="text" id="place" name="place" required class="form-input"
-                                            placeholder="Your city">
-                                    </div>
-                                </div>
-        
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label for="age" class="block text-sm font-semibold text-gray-700 mb-2">Age *</label>
-                                        <input type="number" id="age" name="age" min="18" max="100" required class="form-input"
-                                            placeholder="Your age">
-                                    </div>
-                                    <div>
-                                        <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number
-                                            *</label>
-                                        <input type="tel" id="phone" name="phone" required class="form-input"
-                                            placeholder="Your phone number">
-                                    </div>
-                                </div>
-        
-                                <!-- New Investment Amount Field -->
-                                <div>
-                                    <label for="investment-amount" class="block text-sm font-semibold text-gray-700 mb-2">How
-                                        much amount are you planning to invest?</label>
-                                    <input type="text" id="investment-amount" name="investment-amount" class="form-input"
-                                        placeholder="5 lakh">
-                                </div>
-        
-                                <div>
-                                    <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Questions or
-                                        Comments</label>
-                                    <textarea id="message" name="message" rows="5" class="form-input form-textarea"
-                                        placeholder="Tell us about your investment goals, any questions about the app setup, or specific guidance you need..."></textarea>
-                                </div>
-        
-                                <button type="submit"
-                                    class="w-full bg-accent-color text-white px-6 py-4 rounded-lg font-bold text-lg hover:bg-opacity-90 transition duration-300 shadow-lg hover:shadow-xl">
-                                    <i class="fas fa-paper-plane mr-2"></i>
-                                    Send Message & Get Started
+                <div class="relative bg-gray-800 rounded-3xl p-10 md:p-16 overflow-hidden reveal">
+                    <!-- Decorative Graphic -->
+                    <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/3 w-96 h-96 lg:w-[32rem] lg:h-[32rem] pointer-events-none">
+                        <div class="absolute inset-0 bg-red-500/5 rounded-full"></div>
+                        <div class="absolute inset-[15%] bg-red-500/10 rounded-full"></div>
+                        <div class="absolute inset-[30%] bg-red-500/15 rounded-full"></div>
+                        <div class="absolute inset-[45%] bg-red-500/20 rounded-full"></div>
+                    </div>
+                    <!-- Content -->
+                    <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                        <div class="md:col-start-2 text-center md:text-left">
+                             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">Ready to Build Your Wealth?</h2>
+                             <p class="text-base sm:text-lg mt-4 text-gray-300">Take the first step towards your financial goals today. Get started with a personalized plan.</p>
+                             <div class="mt-10">
+                                <button type="button" onclick="openCalendlyPopup()"
+                                    class="inline-flex items-center justify-center px-6 py-3 rounded-full font-bold text-lg text-white transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    style="background: linear-gradient(to right, var(--color-highlight), #ffb74d);" aria-label="Book consultation">
+                                    <i class="fas fa-calendar-check mr-3"></i>
+                                    Book Consultation
                                 </button>
-        
-                                <p class="text-sm text-gray-500 text-center">
-                                    We'll respond within 24 hours to help you begin your investment journey.
-                                </p>
-                            </form>
-                        </div>
-        
-                        <!-- Why Choose Section -->
-                        <div class="reveal" style="transition-delay: 200ms;">
-                            <h3 class="text-2xl font-bold mb-6" style="color: var(--color-dark);">Why Start with Arjun?</h3>
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div
-                                        class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                        <i class="fas fa-graduation-cap text-green-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg mb-2">Expert Guidance</h4>
-                                        <p class="text-gray-600">7+ years of experience helping individuals and families achieve
-                                            their financial goals through smart investing.</p>
-                                    </div>
-                                </div>
-        
-                                <div class="flex items-start">
-                                    <div
-                                        class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                        <i class="fas fa-user-friends text-blue-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg mb-2">Personalized Approach</h4>
-                                        <p class="text-gray-600">Customized investment strategies tailored to your specific
-                                            goals, risk tolerance, and financial situation.</p>
-                                    </div>
-                                </div>
-        
-                                <div class="flex items-start">
-                                    <div
-                                        class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                        <i class="fas fa-shield-alt text-purple-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg mb-2">Ongoing Support</h4>
-                                        <p class="text-gray-600">Continuous guidance throughout your investment journey with
-                                            regular portfolio reviews and market updates.</p>
-                                    </div>
-                                </div>
-        
-                                <div class="flex items-start">
-                                    <div
-                                        class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                        <i class="fas fa-chart-line text-yellow-600"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg mb-2">Proven Track Record</h4>
-                                        <p class="text-gray-600">Successfully guided 500+ families in building wealth through
-                                            systematic and disciplined investing.</p>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
-                                <div class="grid grid-cols-2 gap-4 text-center">
-                                    <div>
-                                        <div class="text-2xl font-bold accent-color">500+</div>
-                                        <div class="text-sm text-gray-600">Families Guided</div>
-                                    </div>
-                                    <div>
-                                        <div class="text-2xl font-bold accent-color">₹1000Cr+</div>
-                                        <div class="text-sm text-gray-600">For 1000+ Families</div>
-                                    </div>
-                                </div>
-                            </div>
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -452,6 +343,13 @@
             <button type="button" onclick="closeSuccessPopup()">Close</button>
         </div>
     </div>
+
+    <!-- Small circular floating button -->
+<div id="float-consult" class="cal-float">
+  <button type="button" class="cal-float-btn" onclick="openCalendlyPopup()" aria-label="Book consultation">
+    <i class="fas fa-calendar-check"></i>
+  </button>
+</div>
     <!-- JavaScript -->
     <script src="main.js"></script>
 </body>
