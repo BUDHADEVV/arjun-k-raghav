@@ -5,39 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arjun K Raghav | Investment Portfolio</title>
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
-
-
     
-    
-    <!-- Calendly Widget CSS -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     
-    <!-- Calendly Widget JavaScript -->
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
-
 </head>
 <body class="antialiased">
-    <!-- =========== Header =========== -->
     <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-40">
         <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold accent-color">Arjun K Raghav</a>
+            
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#about" class="text-gray-600 hover:accent-color font-medium transition duration-300">About</a>
                 <a href="#videos" class="text-gray-600 hover:accent-color font-medium transition duration-300">Videos</a>
@@ -47,23 +35,30 @@
                 <button onclick="openCalendlyPopup()" class="text-gray-600 hover:accent-color font-medium transition duration-300 bg-transparent border-none cursor-pointer">Appointment</button>
                 <a href="silver-investment.html" class="bg-accent-color text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 shadow-md hover:shadow-lg">Silver</a>
                 <a href="start.html" class="bg-accent-color text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 shadow-md hover:shadow-lg">Start Now</a>
-                
             </div>
-            <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-600 focus:outline-none"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+
+            <div class="md:hidden">
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white">
-            <a href="#about" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">About</a>
-            <a href="#videos" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Videos</a>
-            <a href="#products" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Products</a>
-            <a href="#calculators" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Calculators</a>
-            <a href="#testimonials" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100">Testimonials</a>
-            <button onclick="openCalendlyPopup()" class="block py-3 px-6 text-sm text-gray-600 hover:bg-gray-100 w-full text-left bg-transparent border-none">Appointment</button>
-            <a href="start.html" class="block py-4 px-6 text-sm bg-accent-color text-white text-center rounded-b-lg">Start Now</a>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute w-full left-0 top-full border-t border-gray-200">
+            <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-4 px-6 text-base font-medium text-gray-700 hover:bg-gray-50 border-b border-gray-100">About</a>
+            <a href="#videos" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-4 px-6 text-base font-medium text-gray-700 hover:bg-gray-50 border-b border-gray-100">Videos</a>
+            <a href="#products" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-4 px-6 text-base font-medium text-gray-700 hover:bg-gray-50 border-b border-gray-100">Products</a>
+            <a href="#calculators" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-4 px-6 text-base font-medium text-gray-700 hover:bg-gray-50 border-b border-gray-100">Calculators</a>
+            <a href="#testimonials" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-4 px-6 text-base font-medium text-gray-700 hover:bg-gray-50 border-b border-gray-100">Testimonials</a>
+            <button onclick="openCalendlyPopup(); document.getElementById('mobile-menu').classList.add('hidden')" class="block py-4 px-6 text-base font-medium text-gray-700 hover:bg-gray-50 w-full text-left bg-transparent border-none border-b border-gray-100">Appointment</button>
+            <a href="silver-investment.html" class="block py-4 px-6 text-base font-bold bg-accent-color text-white text-center">Silver Investment</a> <hr>
+            <a href="start.html" class="block py-4 px-6 text-base font-bold bg-accent-color text-white text-center">Start Now</a>
         </div>
     </header>
 
     <main>
-        <!-- =========== Hero Section =========== -->
         <section class="hero-bg">
             <div class="container mx-auto px-4 sm:px-6 py-24 md:py-48 text-center">
                 <div class="max-w-4xl mx-auto reveal">
@@ -84,11 +79,9 @@
             </div>
         </section>
 
-       <!-- =========== About Section =========== -->
-<section id="about" class="bg-white overflow-hidden">
+       <section id="about" class="bg-white overflow-hidden">
     <div class="container mx-auto px-4 sm:px-6 py-20 md:py-32 relative">
         <div class="grid md:grid-cols-5 gap-12 items-center relative z-10">
-            <!-- Text Content -->
             <div class="md:col-span-3 reveal">
                 <h2 class="text-lg font-semibold accent-color mb-3">MY VISION</h2>
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight" style="color: var(--color-dark);">
@@ -98,7 +91,6 @@
                     My vision is to help Malayali families invest wisely and build lasting wealth. I aim to empower over 10,000 families in the coming years through the right financial guidance.
                 </p>
 
-                <!-- Expertise Bullet Points -->
                 <div class="mt-6 space-y-3">
                     <div class="flex items-center">
                         <div class="w-2 h-2 bg-accent-color rounded-full mr-3"></div>
@@ -108,11 +100,8 @@
                         <div class="w-2 h-2 bg-accent-color rounded-full mr-3"></div>
                         <span class="text-base font-medium">Lumpsum Investment Specialist | SIP Planning</span>
                     </div>
-                    
-                    
                 </div>
                 
-                <!-- AMFI Registration Details -->
                 <div class="mt-6 p-4 bg-gray-50 rounded-lg border-l-4 border-accent-color">
                     <p class="text-sm text-gray-700">
                         <span class="font-medium">Name:</span> Arjun K | 
@@ -140,7 +129,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Image -->
             <div class="md:col-span-2 flex justify-center md:justify-end reveal" style="transition-delay: 150ms;">
                 <div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl transform md:rotate-3 transition hover:rotate-0 hover:scale-105">
                     <img src="arjunkraghav.jpg" alt="Arjun K Raghav Portrait" class="w-full h-full object-cover">
@@ -149,13 +137,9 @@
         </div>
     </div>
 </section>
-<!-- Simple HR Line -->
 <hr class="container mx-auto max-w-4xl border-t border-gray-300 my-12">
 
-
-
-        <!-- =========== Educational Videos Section =========== -->
-<section id="videos" class="py-20 md:py-24">
+        <section id="videos" class="py-20 md:py-24">
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center mb-12 sm:mb-16 reveal">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Please Watch These Videos</h2>
@@ -164,7 +148,6 @@
         
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Video 1 -->
                 <div class="video-card reveal">
                     <iframe src="https://www.youtube.com/embed/wDMFCjH7QFE" 
                             title="Mutual Fund Basics Video 1" 
@@ -177,7 +160,6 @@
                     </div>
                 </div>
 
-                <!-- Video 2 -->
                 <div class="video-card reveal" style="transition-delay: 100ms;">
                     <iframe src="https://www.youtube.com/embed/6zmiWq2TtWY" 
                             title="Mutual Fund Basics Video 2" 
@@ -190,7 +172,6 @@
                     </div>
                 </div>
 
-                <!-- Video 3 -->
                 <div class="video-card reveal" style="transition-delay: 200ms;">
                     <iframe src="https://www.youtube.com/embed/2R3gj_jRLYc" 
                             title="Mutual Fund Basics Video 3" 
@@ -203,7 +184,6 @@
                     </div>
                 </div>
 
-                <!-- Video 4 -->
                 <div class="video-card reveal" style="transition-delay: 300ms;">
                     <iframe src="https://www.youtube.com/embed/NXGHqVCPKwY" 
                             title="Mutual Fund Basics Video 4" 
@@ -216,7 +196,6 @@
                     </div>
                 </div>
 
-                <!-- Video 5 -->
                 <div class="video-card reveal" style="transition-delay: 400ms;">
                     <iframe src="https://www.youtube.com/embed/cWsNTQOo18s" 
                             title="Mutual Fund Basics Video 5" 
@@ -229,7 +208,6 @@
                     </div>
                 </div>
 
-                <!-- Video 6 -->
                 <div class="video-card reveal" style="transition-delay: 500ms;">
                     <iframe src="https://www.youtube.com/embed/fBtgUiemvaI" 
                             title="Mutual Fund Basics Video 6" 
@@ -242,28 +220,18 @@
                     </div>
                 </div>
             </div>
-
-            
         </div>
     </div>
 </section>
-<!-- Simple HR Line -->
 <hr class="container mx-auto max-w-4xl border-t border-gray-300 my-12">
 
-        
-
-
-
-
-        <!-- =========== Products Section =========== -->
-<section id="products" class="py-20 md:py-24">
+        <section id="products" class="py-20 md:py-24">
     <div class="container mx-auto px-4 sm:px-6">
         <div class="text-center mb-12 sm:mb-16 reveal">
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">Investment Products</h2>
             <p class="text-base sm:text-lg mt-4 max-w-2xl mx-auto">Tailored solutions designed to grow and protect your family's capital.</p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Product Card 1 - Mutual Funds -->
             <a href="mutual.html" class="product-card reveal block cursor-pointer">
                 <div class="illustration">
                     <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +245,6 @@
                 </div>
             </a>
 
-            <!-- Product Card 2 - IAP (Dark) -->
             <a href="iap.html" class="product-card dark reveal block cursor-pointer" style="transition-delay: 100ms;">
                 <div class="illustration">
                     <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,7 +258,6 @@
                 </div>
             </a>
 
-            <!-- Product Card 3 - PMS -->
             <a href="pms.html" class="product-card reveal block cursor-pointer" style="transition-delay: 200ms;">
                 <div class="illustration">
                     <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +273,6 @@
     </div>
 </section>
 
-        <!-- =========== Calculators Section =========== -->
         <section id="calculators" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-12 reveal">
@@ -327,13 +292,10 @@
                 </div>
         
                 <div class="max-w-6xl mx-auto reveal">
-                    <!-- Calculator Panels Wrapper -->
                     <div class="bg-gray-50/50 p-4 sm:p-8 rounded-2xl shadow-inner">
-                        <!-- SIP Calculator Panel -->
                         <div id="sip-panel" class="calculator-panel">
                             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                                 <div class="lg:col-span-2 space-y-6">
-                                    <!-- Inputs -->
                                     <div>
                                         <label for="sipAmount" class="font-semibold text-gray-700">Monthly Investment</label>
                                         <div class="slider-input-group mt-2">
@@ -367,7 +329,6 @@
                                     </div>
                                 </div>
                                 <div class="lg:col-span-3 flex flex-col">
-                                    <!-- Results -->
                                     <div class="bg-white p-6 rounded-lg shadow-sm text-center">
                                         <p class="text-gray-500">Total Value</p>
                                         <p id="sipTotal" class="text-4xl sm:text-5xl font-bold accent-color my-2">₹ 25,22,881
@@ -378,14 +339,12 @@
                                             <span>Returns: <span id="sipReturns" class="font-semibold">₹ 16,22,881</span></span>
                                         </div>
                                     </div>
-                                    <!-- Graph -->
                                     <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm mt-4 flex-grow min-h-[250px]"><canvas
                                             id="sipChart"></canvas></div>
                                 </div>
                             </div>
                         </div>
         
-                        <!-- Lumpsum Calculator Panel -->
                         <div id="lumpsum-panel" class="calculator-panel hidden">
                             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                                 <div class="lg:col-span-2 space-y-6">
@@ -440,9 +399,7 @@
                             </div>
                         </div>
         
-                        <!-- Step-Up SIP Calculator Panel -->
                         <div id="step-up-sip-panel" class="calculator-panel hidden">
-                            <!-- Your existing Step-Up SIP content -->
                             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                                 <div class="lg:col-span-2 space-y-6">
                                     <div>
@@ -506,9 +463,7 @@
                             </div>
                         </div>
         
-                        <!-- Inflation Calculator Panel -->
                         <div id="inflation-panel" class="calculator-panel hidden">
-                            <!-- Your existing Inflation content -->
                             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                                 <div class="lg:col-span-2 space-y-6">
                                     <div>
@@ -559,9 +514,7 @@
                             </div>
                         </div>
         
-                        <!-- SWP Calculator Panel -->
                         <div id="swp-panel" class="calculator-panel hidden">
-                            <!-- Your existing SWP content -->
                             <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                                 <div class="lg:col-span-2 space-y-6">
                                     <div>
@@ -627,46 +580,15 @@
             </div>
         </section>
 
-
-        <!-- =========== Video Testimonials Section =========== -->
-         <!--
-        <section id="testimonials" class="py-20 md:py-24 overflow-hidden">
-            <div class="container mx-auto px-4 sm:px-6">
-                <div class="text-center mb-12 sm:mb-16 reveal">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold" style="color: var(--color-dark);">What My Clients Say</h2>
-                    <p class="text-base sm:text-lg mt-4 max-w-2xl mx-auto">Real stories from clients who have achieved their financial goals.</p>
-                </div>
-                <div class="relative reveal">
-                    <div class="video-slider-container">
-                        <div class="video-slide" data-index="0"><video poster="https://placehold.co/280x498/333333/FFFFFF?text=Client+1+Reel" muted loop playsinline></video></div>
-                        <div class="video-slide" data-index="1"><video poster="https://placehold.co/280x498/E53935/FFFFFF?text=Client+2+Reel" muted loop playsinline></video></div>
-                        <div class="video-slide" data-index="2"><video poster="https://placehold.co/280x498/555555/FFFFFF?text=Client+3+Reel" muted loop playsinline></video></div>
-                        <div class="video-slide" data-index="3"><video poster="https://placehold.co/280x498/777777/FFFFFF?text=Client+4+Reel" muted loop playsinline></video></div>
-                    </div>
-                    <div class="slider-nav">
-                        <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-                        <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-
-
-        
-
-        <!-- =========== CTA Section =========== -->
         <section id="contact" class="py-20 md:py-24">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="relative bg-gray-800 rounded-3xl p-10 md:p-16 overflow-hidden reveal">
-                    <!-- Decorative Graphic -->
                     <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/3 w-96 h-96 lg:w-[32rem] lg:h-[32rem] pointer-events-none">
                         <div class="absolute inset-0 bg-red-500/5 rounded-full"></div>
                         <div class="absolute inset-[15%] bg-red-500/10 rounded-full"></div>
                         <div class="absolute inset-[30%] bg-red-500/15 rounded-full"></div>
                         <div class="absolute inset-[45%] bg-red-500/20 rounded-full"></div>
                     </div>
-                    <!-- Content -->
                     <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
                         <div class="md:col-start-2 text-center md:text-left">
                              <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">Ready to Build Your Wealth?</h2>
@@ -687,18 +609,14 @@
 
     </main>
 
-    <!-- =========== Footer =========== -->
-<footer class="bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white">
     <div class="container mx-auto px-4 sm:px-6 py-16">
-        <!-- Main Footer Content -->
         <div class="grid md:grid-cols-4 gap-8 mb-12">
-            <!-- Brand Section -->
             <div class="md:col-span-2">
                 <h3 class="text-3xl font-bold mb-4 accent-color">Arjun K Raghav</h3>
                 <p class="text-gray-300 mb-6 max-w-md">
                     Your trusted partner in building generational wealth for Malayali families. Expert financial guidance for a prosperous tomorrow.
                 </p>
-                <!-- AMFI Details -->
                 <div class="bg-gray-800 p-4 rounded-lg mb-6">
                     <p class="text-sm text-gray-400">
                         <span class="font-medium">Name:</span> Arjun K | 
@@ -708,7 +626,6 @@
                 </div>
             </div>
 
-            <!-- Quick Links -->
             <div>
                 <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                 <ul class="space-y-3">
@@ -721,7 +638,6 @@
                 </ul>
             </div>
 
-            <!-- Educational Resources -->
             <div>
                 <h4 class="text-lg font-semibold mb-4">Learn</h4>
                 <ul class="space-y-3">
@@ -733,10 +649,8 @@
             </div>
         </div>
 
-        <!-- Social Media & Bottom Section -->
         <div class="border-t border-gray-700 pt-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <!-- Social Media Links -->
                 <div class="flex space-x-6 mb-6 md:mb-0">
                     <a href="https://www.linkedin.com/in/arjun-k-raghav-a2793a321/" target="_blank" rel="noopener" 
                        class="bg-gray-800 p-3 rounded-full text-gray-400 hover:text-white hover:bg-blue-600 transition duration-300" 
@@ -755,7 +669,6 @@
                     </a>
                 </div>
 
-                <!-- Copyright -->
                 <div class="text-center md:text-right">
                     <p class="text-gray-400 text-sm mb-2">
                         Building wealth for <span class="font-semibold text-white">500+ families</span> since 2018
@@ -767,7 +680,6 @@
             </div>
         </div>
 
-        <!-- Disclaimer -->
         <div class="mt-8 pt-6 border-t border-gray-800">
             <p class="text-xs text-gray-500 text-center max-w-4xl mx-auto leading-relaxed">
                 <strong>Disclaimer:</strong> Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. This website is for informational purposes only and should not be construed as investment advice.
@@ -775,7 +687,6 @@
         </div>
     </div>
 
-    <!-- Designer Credit Bottom Bar -->
     <div class="bg-gray-950 border-t border-gray-800">
         <div class="container mx-auto px-4 sm:px-6 py-3">
             <div class="text-center">
@@ -789,9 +700,6 @@
     </div>
 </footer>
 
-
-
-    <!-- =========== LinkedIn Notification Pop-up =========== -->
     <div id="linkedin-popup">
         <div class="flex-shrink-0">
             <i class="fab fa-linkedin-in text-3xl text-blue-600 bg-gray-100 p-2 rounded-full"></i>
@@ -803,19 +711,35 @@
         <button id="popup-close-btn" class="close-btn">&times;</button>
     </div>
 
-    <!-- Small circular floating button -->
-<div id="float-consult" class="cal-float">
+    <div id="float-consult" class="cal-float">
   <button type="button" class="cal-float-btn" onclick="openCalendlyPopup()" aria-label="Book consultation">
     <i class="fas fa-calendar-check"></i>
   </button>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
 
-<!-- Your existing JavaScript -->
+        if (btn && menu) {
+            // Toggle the menu when the hamburger icon is clicked
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close the menu when a link inside it is clicked
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+    });
+</script>
+
 <script src="main.js"></script>
 
-    
-    <!-- JavaScript -->
-    <script src="main.js"></script>
 </body>
 </html>
